@@ -5,8 +5,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "DevBD1 Minecraft Plugins",
-  tagline: "Dinosaurs are cool",
+  title: "Cublex Minecraft Plugins",
+  tagline: "Premium&Free Plugins",
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,15 +15,17 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: "https://devbd1.github.io",
+  url: "https://dev.cublex.net",
+  // https://devbd1.github.io
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/", // /docs-minecraft-plugins
+  baseUrl: "/", 
+  // /docs-minecraft-plugins
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "DevBD1",
-  projectName: "docs-minecraft-plugins",
+  organizationName: "cublex-plugins",
+  projectName: "dev-webapp",
 
   deploymentBranch: "gh-pages",
 
@@ -36,7 +38,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", "tr"],
   },
 
   presets: [
@@ -47,8 +49,8 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          //editUrl:
+          //  "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
@@ -58,8 +60,8 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          //editUrl:
+          //  "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -76,9 +78,9 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "dev.cublex",
       logo: {
-        alt: "My Site Logo",
+        alt: "Cublex Logo",
         src: "img/logo.svg",
       },
       items: [
@@ -90,7 +92,7 @@ const config: Config = {
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/cublex-plugins",
           label: "GitHub",
           position: "right",
         },
