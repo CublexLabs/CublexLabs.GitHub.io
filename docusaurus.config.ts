@@ -24,7 +24,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "cublex-plugins",
+  organizationName: "cublexlabs",
   projectName: "dev-webapp",
 
   deploymentBranch: "gh-pages",
@@ -141,7 +141,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Cublex Labs, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
