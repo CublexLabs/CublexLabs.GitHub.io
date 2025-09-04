@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: "How to make a Dialog"
+sidebar_label: "Common Settings"
 ---
 
 # How to make a Dialog
