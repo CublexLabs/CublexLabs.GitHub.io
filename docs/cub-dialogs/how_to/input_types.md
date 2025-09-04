@@ -1,11 +1,11 @@
 ---
 sidebar_position: 5
-sidebar_label: "Inputs"
+sidebar_label: "Input Types"
 ---
 
-## Input Types
+# Input Types
 
-1. boolean
+## 1. boolean
 
 ```yaml
 inputs:
@@ -18,7 +18,7 @@ inputs:
     on_false: "decline" # optional
 ```
 
-2. number_range
+## 2. number_range
 
 ```yaml
 inputs:
@@ -44,7 +44,7 @@ inputs:
     label_format: "%s: %s percent to the next level"
 ```
 
-3. single_option
+## 3. single_option
 
 ```yaml
 inputs:
@@ -59,7 +59,7 @@ inputs:
       - "Option 3"
 ```
 
-4. text
+## 4. text
 
 ```yaml
 inputs:

@@ -3,11 +3,13 @@ sidebar_position: 4
 sidebar_label: "Buttons and Actions"
 ---
 
-## Dialog Buttons
+# Buttons and Actions
+
+## Buttons
 
 Buttons can be used like:
 
-> `notice` : Only 1 `exit_button`.
+### 1) `notice` : Only 1 `exit_button`.
 
 ```yaml
 exit_button:
@@ -18,7 +20,7 @@ exit_button:
     type: "close"
 ```
 
-> `confirmation` : 2 `exit_buttons`, `confirm` and `cancel`.
+### 2) `confirmation` : 2 `exit_buttons`, `confirm` and `cancel`.
 
 ```yaml
 exit_buttons:
@@ -39,7 +41,7 @@ exit_buttons:
     # No action = closes dialog
 ```
 
-> `multi_action` : Many buttons under `buttons` key, and only 1 `exit_button`.
+### 3) `multi_action` : Many buttons under `buttons` key, and only 1 `exit_button`.
 
 ```yaml
 buttons:
@@ -85,7 +87,7 @@ exit_button:
     type: "close"
 ```
 
-## Supported Actions
+## Actions
 
 `close`: Closes the dialog and all previous inventories.
 `return`: Closes the dialog and returns to the previous non-dialog screen (if any).
