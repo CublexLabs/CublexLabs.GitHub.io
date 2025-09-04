@@ -53,4 +53,4 @@ If this setting is not `true`, then this dialog won't be loaded or opened in-gam
 permission: "cubDialogs.dialog.open.noticement"
 ```
 
-You can set any string as a permission to restrict access to this dialog.
+You can set any string as a permission to restrict access to this dialog. If you don't set a permission (null or "") the dialog will not require any permission.

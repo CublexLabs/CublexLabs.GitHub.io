@@ -9,7 +9,7 @@ sidebar_label: "Buttons and Actions"
 
 Buttons can be used like:
 
-### 1) `notice` : Only 1 `exit_button`.
+### 1. `notice` : Only 1 `exit_button`.
 
 ```yaml
 exit_button:
@@ -20,7 +20,7 @@ exit_button:
     type: "close"
 ```
 
-### 2) `confirmation` : 2 `exit_buttons`, `confirm` and `cancel`.
+### 2. `confirmation` : 2 `exit_buttons`, `confirm` and `cancel`.
 
 ```yaml
 exit_buttons:
@@ -41,7 +41,7 @@ exit_buttons:
     # No action = closes dialog
 ```
 
-### 3) `multi_action` : Many buttons under `buttons` key, and only 1 `exit_button`.
+### 3. `multi_action` : Many buttons under `buttons` key, and only 1 `exit_button`.
 
 ```yaml
 buttons:

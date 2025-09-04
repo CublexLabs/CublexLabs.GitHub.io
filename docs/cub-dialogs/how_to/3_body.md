@@ -3,11 +3,11 @@ sidebar_position: 3
 sidebar_label: "Body"
 ---
 
-# Dialog Body
+# Body
 
 These settings can be used in `notice`, `confirmation` and `multi_action` dialog types.
 
-## plain_message
+### 1. plain_message
 
 ```yaml
 body:
@@ -16,7 +16,7 @@ body:
   width: 400
 ```
 
-## item
+### 2. item
 
 ```yaml
 body:
