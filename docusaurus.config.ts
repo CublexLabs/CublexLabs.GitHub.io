@@ -18,7 +18,7 @@ const config: Config = {
   baseUrl: "/",
 
   organizationName: "CublexLabs",
-  projectName: "WebApp",
+  projectName: "CublexLabs.GitHub.io",
 
   deploymentBranch: "gh-pages",
 
