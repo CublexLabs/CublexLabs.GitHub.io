@@ -156,10 +156,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: {
-        text: `Copyright © ${new Date().getFullYear()} Cublex Labs, Inc. Built with Docusaurus.`,
-        style: { textAlign: "right" },
-      },
+      copyright: `Copyright © ${new Date().getFullYear()} Cublex Labs, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
