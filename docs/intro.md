@@ -2,46 +2,34 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Information (Read First)
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## What is Cublex Labs?
 
-## Getting Started
+Cublex Labs is the foundation for Cub plugin series, CublexCore and every product created for **Minecraft Java Edition** servers.
 
-Get started by **creating a new site**.
+## What is Cub0?
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Cub0 is our powerful core library that serves as the foundation for all Cub plugins. It provides essential features like:
 
-### What you'll need
+- Advanced data management
+- Performance optimization
+- Common utilities and tools
+- Unified configuration system
+- Cross-plugin compatibility
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+Think of Cub0 as the engine that drives all Cub plugins. While it needs to be installed as a separate plugin, this modular approach ensures better performance, easier updates, and reduced redundancy across our plugin ecosystem.
 
-## Generate a new site
+## How do I install Cub0?
 
-Generate a new Docusaurus site using the **classic template**.
+To install Cub0, simply place the Cub0 plugin file into your server’s `/plugins/` directory and restart your server. Cub0 requires [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) to work properly—be sure to download and install the latest version if you don’t already have it.
 
-The classic template will automatically be added to your project after you run the command:
+You can get the latest Cub0 release from [GitHub](https://github.com/), [SpigotMC](https://www.spigotmc.org/), [BuiltByBit](https://builtbybit.com/), or [Polymart](https://polymart.org/).
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+## Where can I buy the plugins?
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+All plugins are available on SpigotMC, BuiltByBit and Polymart.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+### Interested in partnerships?
 
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Contact us on [Discord](https://discord.gg/Hqq3CdnenN) for sponsorship opportunities.
