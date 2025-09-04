@@ -98,6 +98,14 @@ const config: Config = {
           label: "Contribute on GitHub",
           position: "right",
         },
+        {
+          type: "localeDropdown",
+          position: "right",
+        },
+        {
+          type: "docsVersionDropdown",
+          position: "right",
+        },
       ],
     },
     footer: {
