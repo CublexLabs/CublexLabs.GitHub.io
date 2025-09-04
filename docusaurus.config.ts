@@ -14,16 +14,9 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  // Set the production url of your site here
   url: "https://labs.cublex.net",
-  // https://devbd1.github.io
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/", 
-  // /docs-minecraft-plugins
+  baseUrl: "/",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: "CublexLabs",
   projectName: "WebApp",
 
@@ -80,7 +73,7 @@ const config: Config = {
     navbar: {
       title: "CublexLabs",
       logo: {
-        alt: "Cublex Logo",
+        alt: "CublexLabs Logo",
         src: "img/logo.svg",
       },
       items: [
@@ -90,10 +83,19 @@ const config: Config = {
           position: "left",
           label: "Tutorial",
         },
-        { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/cublex-plugins",
-          label: "GitHub",
+          to: "/blog",
+          label: "Blog",
+          position: "left",
+        },
+        {
+          href: "https://discord.gg/Hqq3CdnenN",
+          label: "Join us on Discord",
+          position: "right",
+        },
+        {
+          href: "https://github.com/CublexLabs",
+          label: "Contribute on GitHub",
           position: "right",
         },
       ],
@@ -111,19 +113,32 @@ const config: Config = {
           ],
         },
         {
+          title: "Marketplaces",
+          items: [
+            {
+              label: "SpigotMC",
+              href: "https://www.spigotmc.org/resources/authors/394490/",
+            },
+            {
+              label: "BuiltByBit",
+              href: "https://builtbybit.com/search/member?user_id=621438",
+            },
+          ],
+        },
+        {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              href: "https://discord.gg/Hqq3CdnenN",
             },
             {
-              label: "X",
-              href: "https://x.com/docusaurus",
+              label: "Reddit",
+              href: "https://www.reddit.com/u/CublexLabs/",
+            },
+            {
+              label: "YouTube",
+              href: "https://www.youtube.com/CublexLabs/",
             },
           ],
         },
@@ -136,12 +151,15 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/CublexLabs",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Cublex Labs, Inc. Built with Docusaurus.`,
+      copyright: {
+        text: `Copyright © ${new Date().getFullYear()} Cublex Labs, Inc. Built with Docusaurus.`,
+        style: { textAlign: "right" },
+      },
     },
     prism: {
       theme: prismThemes.github,
