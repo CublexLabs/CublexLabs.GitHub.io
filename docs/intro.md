@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
+sidebar_label: 'Start from here!'
 ---
 
-# Information (Read First)
+# Information
 
 ## What is Cublex Labs?
 

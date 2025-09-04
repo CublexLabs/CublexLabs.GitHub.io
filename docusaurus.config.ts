@@ -79,9 +79,9 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "wikiSidebar",
+          label: "Wiki",
           position: "left",
-          label: "Tutorial",
         },
         {
           to: "/blog",
@@ -112,10 +112,14 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Pages",
           items: [
             {
-              label: "Tutorial",
+              label: "Main Page",
+              to: "/",
+            },
+            {
+              label: "Wiki",
               to: "/docs/intro",
             },
           ],
