@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 'Start from here!'
+sidebar_label: "Start from here!"
 ---
 
 # Information
@@ -35,6 +35,6 @@ You can get the latest Cub0 release from [GitHub](https://github.com/), [SpigotM
 
 All plugins are available on [SpigotMC](https://www.spigotmc.org/resources/authors/394490/), [BuiltByBit](https://builtbybit.com/search/member?user_id=621438) and Polymart.
 
-### Interested in partnerships?
+## Interested in partnerships?
 
 Contact us on [Discord](https://discord.gg/Hqq3CdnenN) for sponsorship opportunities.
