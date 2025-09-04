@@ -1,0 +1,8 @@
+{
+  "label": "How to make a Dialog",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Creating a dialog with CubDialogs is easy! Follow these steps:\n\n1. Define your dialog in a YAML file.\n2. Specify the dialog type (Notice, Confirmation, or Multi Action).\n3. Customize the dialog content, including text, buttons, and actions.\n4. Use the API to trigger the dialog in your Minecraft server."
+  }
+}

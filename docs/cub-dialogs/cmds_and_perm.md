@@ -5,6 +5,8 @@ sidebar_label: "Commands and Permissions"
 
 # Commands and Permissions
 
+All commands, description and default permissions.
+
 | Command           | Permission                   | Description                     |
 | ----------------- | ---------------------------- | ------------------------------- |
 | `/cdia reload`    | `cubDialogs.command.main`    | Reload the plugin               |
