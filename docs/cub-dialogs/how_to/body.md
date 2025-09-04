@@ -9,7 +9,7 @@ These settings can be used in `notice`, `confirmation` and `multi_action` dialog
 
 ## plain_message
 
-```
+```yaml
 body:
   type: "plain_message"
   message: "<gradient:#8a2be2:#1e90ff>Select an action from the options below.</gradient>"
@@ -18,7 +18,7 @@ body:
 
 ## item
 
-```
+```yaml
 body:
   - type: "item"
     material: "BARRIER"
