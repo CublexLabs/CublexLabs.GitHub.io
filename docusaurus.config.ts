@@ -5,8 +5,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "Cublex Minecraft Plugins",
-  tagline: "Premium&Free Plugins",
+  title: "Cublex Labs",
+  tagline: "Freemium Plugins",
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: "https://dev.cublex.net",
+  url: "https://labs.cublex.net",
   // https://devbd1.github.io
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
@@ -24,8 +24,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "cublexlabs",
-  projectName: "dev-webapp",
+  organizationName: "CublexLabs",
+  projectName: "WebApp",
 
   deploymentBranch: "gh-pages",
 
@@ -78,7 +78,7 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "dev.cublex",
+      title: "CublexLabs",
       logo: {
         alt: "Cublex Logo",
         src: "img/logo.svg",
