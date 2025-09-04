@@ -6,7 +6,7 @@ sidebar_label: "Common Settings"
 # Common Settings
 
 > **Note:** You can copy and use a configuration from the auto-generated templates under the CubDialogs folder.
-> ![Template Dialog Example](/static/img/template_dialogs.png)
+> ![Template Dialog Example](/img/template_dialogs.png)
 
 These are the common settings across all dialogs types. (notice, confirmation, multi_action)
 
