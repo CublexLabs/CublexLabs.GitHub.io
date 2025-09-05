@@ -50,7 +50,7 @@ If this setting is not `true`, then this dialog won't be loaded or opened in-gam
 ### 5. Permission to access this dialog
 
 ```
-permission: "cubDialogs.dialog.open.noticement"
+permission_to_open: "cubDialogs.dialog.open.noticement"
 ```
 
 You can set any string as a permission to restrict access to this dialog. If you don't set a permission (null or "") the dialog will not require any permission.
