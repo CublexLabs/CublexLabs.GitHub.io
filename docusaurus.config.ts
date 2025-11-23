@@ -78,14 +78,25 @@ const config: Config = {
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "wikiSidebar",
-          label: "Wiki",
+          to: "/",
+          label: "Home",
+          position: "left",
+          activeBaseRegex: "^/$",
+        },
+        {
+          to: "/projects",
+          label: "Projects",
           position: "left",
         },
         {
           to: "/blog",
           label: "Blog",
+          position: "left",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "wikiSidebar",
+          label: "Wiki",
           position: "left",
         },
         {
