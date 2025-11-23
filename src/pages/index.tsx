@@ -8,6 +8,8 @@ import {
   WhyCublexSection,
 } from '@site/src/components/HomepageSections';
 
+import BackgroundAnimation from '@site/src/components/BackgroundAnimation';
+
 // ${siteConfig.title}
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
@@ -16,6 +18,7 @@ export default function Home(): ReactNode {
       title={`Build. Play. Evolve.`}
       description="Tools, Games, and Services for the Next Generation">
       <main>
+        <BackgroundAnimation />
         <HeroSection />
         <WhatWeDoSection />
         <FocusAreasSection />

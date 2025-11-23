@@ -6,105 +6,175 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #3b82f6;
-  /* Modern Blue */
-  --ifm-color-primary-dark: #2563eb;
-  --ifm-color-primary-darker: #1d4ed8;
-  --ifm-color-primary-darkest: #1e40af;
-  --ifm-color-primary-light: #60a5fa;
-  --ifm-color-primary-lighter: #93c5fd;
-  --ifm-color-primary-lightest: #dbeafe;
+  /* Core Brand Colors - Light Mode */
+  --ifm-color-primary: #6366f1;
+  /* Indigo 500 */
+  --ifm-color-primary-dark: #4f46e5;
+  --ifm-color-primary-darker: #4338ca;
+  --ifm-color-primary-darkest: #3730a3;
+  --ifm-color-primary-light: #818cf8;
+  --ifm-color-primary-lighter: #a5b4fc;
+  --ifm-color-primary-lightest: #c7d2fe;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  /* Custom Variables for Cublex Labs */
-  --cublex-bg-dark: #0f172a;
-  --cublex-bg-card: rgba(30, 41, 59, 0.7);
-  --cublex-border: rgba(148, 163, 184, 0.1);
-  --cublex-text-primary: #f8fafc;
-  --cublex-text-secondary: #94a3b8;
+  /* Cublex Premium Palette - Light */
+  --cublex-bg-base: #ffffff;
+  --cublex-bg-subtle: #f8fafc;
+  /* Slate 50 */
+  --cublex-bg-card: rgba(255, 255, 255, 0.7);
+  --cublex-border: rgba(148, 163, 184, 0.2);
+  --cublex-text-primary: #0f172a;
+  /* Slate 900 */
+  --cublex-text-secondary: #475569;
+  /* Slate 600 */
   --cublex-accent: #8b5cf6;
-  /* Violet */
-  --cublex-gradient-1: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-  --cublex-gradient-2: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  /* Violet 500 */
+
+  /* Gradients */
+  --cublex-gradient-1: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  /* Indigo to Purple */
+  --cublex-gradient-glow: radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+
+  /* UI Elements */
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.8);
+  --ifm-footer-background-color: #f8fafc;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark Mode - The "Premium" Deep Space Look */
 [data-theme='dark'] {
-  --ifm-color-primary: #60a5fa;
-  --ifm-color-primary-dark: #3b82f6;
-  --ifm-color-primary-darker: #2563eb;
-  --ifm-color-primary-darkest: #1d4ed8;
-  --ifm-color-primary-light: #93c5fd;
-  --ifm-color-primary-lighter: #bfdbfe;
-  --ifm-color-primary-lightest: #dbeafe;
+  --ifm-color-primary: #818cf8;
+  /* Indigo 400 */
+  --ifm-color-primary-dark: #6366f1;
+  --ifm-color-primary-darker: #4f46e5;
+  --ifm-color-primary-darkest: #4338ca;
+  --ifm-color-primary-light: #a5b4fc;
+  --ifm-color-primary-lighter: #c7d2fe;
+  --ifm-color-primary-lightest: #e0e7ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-background-color: #0b1120;
+
+  /* Cublex Premium Palette - Dark */
+  --ifm-background-color: #020617;
+  /* Slate 950 - Almost Black */
+  --cublex-bg-base: #020617;
+  --cublex-bg-subtle: #0f172a;
+  /* Slate 900 */
+  --cublex-bg-card: rgba(15, 23, 42, 0.6);
+  /* Glassy Slate */
+  --cublex-border: rgba(148, 163, 184, 0.1);
+  --cublex-text-primary: #f8fafc;
+  /* Slate 50 */
+  --cublex-text-secondary: #94a3b8;
+  /* Slate 400 */
+
+  /* UI Elements */
+  --ifm-navbar-background-color: rgba(2, 6, 23, 0.8);
+  --ifm-footer-background-color: #0f172a;
 }
 
 /* Global Styles */
 body {
-  font-family: 'Inter', sans-serif;
-  /* Assuming Inter is available or fallback */
+  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--cublex-bg-base);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  /* Prevent scrollbar from animation overflow */
+}
+
+/* Navbar Glassmorphism */
+.navbar {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--cublex-border);
 }
 
 /* Hero Section */
 .hero-section {
-  padding: 6rem 0;
+  padding: 8rem 0 6rem;
   text-align: center;
-  background: radial-gradient(circle at top center, rgba(59, 130, 246, 0.15), transparent 60%);
   position: relative;
-  overflow: hidden;
+  z-index: 1;
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
   background: var(--cublex-gradient-1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  filter: drop-shadow(0 0 30px rgba(99, 102, 241, 0.3));
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   color: var(--cublex-text-secondary);
-  max-width: 800px;
-  margin: 0 auto 2.5rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
   line-height: 1.6;
+  font-weight: 400;
 }
 
 /* Feature Cards */
 .features-section {
-  padding: 4rem 0;
+  padding: 6rem 0;
+  position: relative;
+  z-index: 1;
 }
 
 .feature-card {
   background: var(--cublex-bg-card);
   border: 1px solid var(--cublex-border);
-  border-radius: 1rem;
-  padding: 2rem;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
   height: 100%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.2);
+  border-color: var(--ifm-color-primary);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
 }
 
 .feature-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  display: inline-block;
-  padding: 0.75rem;
-  background: rgba(59, 130, 246, 0.1);
-  border-radius: 0.75rem;
-  color: #60a5fa;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 1rem;
+  color: var(--ifm-color-primary);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .feature-title {
@@ -116,72 +186,103 @@ body {
 
 .feature-description {
   color: var(--cublex-text-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 1.05rem;
 }
 
 /* Section Headers */
 .section-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 800;
   margin-bottom: 1rem;
+  color: var(--cublex-text-primary);
+  letter-spacing: -0.02em;
 }
 
 .section-tagline {
-  color: var(--cublex-accent);
-  font-weight: 600;
+  color: var(--ifm-color-primary);
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   font-size: 0.875rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   display: block;
 }
 
 /* Grid Layouts */
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
 }
 
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2.5rem;
 }
 
 /* Buttons */
 .cta-button {
   display: inline-flex;
   align-items: center;
-  padding: 0.75rem 2rem;
+  padding: 1rem 2.5rem;
   background: var(--cublex-gradient-1);
-  color: white;
+  color: white !important;
   font-weight: 600;
   border-radius: 9999px;
-  text-decoration: none;
-  transition: opacity 0.2s;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
   border: none;
+  font-size: 1.1rem;
+  box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.4);
 }
 
 .cta-button:hover {
-  opacity: 0.9;
-  color: white;
-  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(99, 102, 241, 0.5);
+  filter: brightness(1.1);
 }
 
 .cta-button-secondary {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  margin-left: 1rem;
+  border: 1px solid var(--cublex-border);
+  margin-left: 1.5rem;
+  color: var(--cublex-text-primary) !important;
+  box-shadow: none;
 }
 
-/* Dark Mode Specifics */
-[data-theme='dark'] .hero-section {
-  background: radial-gradient(circle at top center, rgba(59, 130, 246, 0.1), transparent 70%);
+.cta-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--cublex-text-secondary);
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--cublex-border);
+}
+
+/* Cursor Animation Container - will be used by the React component */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(99, 102, 241, 0.15), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body:hover .cursor-glow {
+  opacity: 1;
 }
