@@ -8,7 +8,7 @@ import {
   WhyCublexSection,
 } from '@site/src/components/HomepageSections';
 
-import BackgroundAnimation from '@site/src/components/BackgroundAnimation';
+import AmbientBackground from '@site/src/components/AmbientBackground';
 
 // ${siteConfig.title}
 export default function Home(): ReactNode {
@@ -18,7 +18,7 @@ export default function Home(): ReactNode {
       title={`Build. Play. Evolve.`}
       description="Tools, Games, and Services for the Next Generation">
       <main>
-        <BackgroundAnimation />
+        <AmbientBackground />
         <HeroSection />
         <WhatWeDoSection />
         <FocusAreasSection />
