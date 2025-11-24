@@ -1,7 +1,7 @@
 export const UI_CONFIG = {
     ambientBackground: {
         enabled: true,
-        type: 'swirl' as 'particlesText' | 'swirl', // Add more types here later
+        type: 'particlesText' as 'particlesText' | 'swirl', // Add more types here later
         text: 'cublex labs',
         swirl: {
             particleCount: 700,
