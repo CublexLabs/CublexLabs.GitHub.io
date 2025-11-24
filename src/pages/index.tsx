@@ -15,7 +15,7 @@ export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Build. Play. Evolve.`}
+      title={siteConfig.title}
       description="Tools, Games, and Services for the Next Generation">
       <main>
         <AmbientBackground />
