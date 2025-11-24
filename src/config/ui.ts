@@ -1,8 +1,25 @@
 export const UI_CONFIG = {
     ambientBackground: {
         enabled: true,
-        type: 'particlesText' as 'particlesText', // Add more types here later
+        type: 'swirl' as 'particlesText' | 'swirl', // Add more types here later
         text: 'cublex labs',
+        swirl: {
+            particleCount: 700,
+            rangeY: 100,
+            baseTTL: 50,
+            rangeTTL: 150,
+            baseSpeed: 0.1,
+            rangeSpeed: 2,
+            baseRadius: 1,
+            rangeRadius: 4,
+            baseHue: 220,
+            rangeHue: 100,
+            noiseSteps: 8,
+            xOff: 0.00125,
+            yOff: 0.00125,
+            zOff: 0.0005,
+            backgroundColor: 'hsla(260,40%,5%,1)',
+        },
         colors: ['#06b6d4', '#8b5cf6'], // Cyan, Violet
         particleDensity: 6, // Lower is denser (step size)
         repulsionRadius: 24, // Cursor interaction radius
