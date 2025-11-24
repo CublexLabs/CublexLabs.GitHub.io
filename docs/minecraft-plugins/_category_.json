@@ -1,0 +1,8 @@
+{
+  "label": "Minecraft Plugins",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "All plugins are here."
+  }
+}

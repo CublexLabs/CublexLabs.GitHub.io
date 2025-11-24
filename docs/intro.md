@@ -1,13 +1,19 @@
 ---
 sidebar_position: 1
-sidebar_label: "Start from here!"
+sidebar_label: "Introduction"
 ---
 
-# Information
+# Introduction
 
 ## What is Cublex Labs?
 
-Cublex Labs is the foundation for Cub plugin series, CublexCore and every product created for **Minecraft Java Edition** servers.
+Cublex Labs is a multi-disciplinary software studio focused on developing plugins, servers, apps, and indie games.
+It operates like a technical R&D lab — small, agile, experimental — shipping products across several categories:
+
+- Minecraft Plugins
+- ~~Hytale Plugins~~ (SOON)
+- ~~Mobile Apps~~ (SOON)
+- ~~Indie Games~~ (SOON)
 
 ## What is Cub0.jar?
 

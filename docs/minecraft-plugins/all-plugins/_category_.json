@@ -1,6 +1,6 @@
 {
   "label": "Common in all plugins",
-  "position": 2,
+  "position": 1,
   "link": {
     "type": "generated-index",
     "description": "This stuff is common for all plugins. They come from Cub, the Core Plugin of the ecosystem."

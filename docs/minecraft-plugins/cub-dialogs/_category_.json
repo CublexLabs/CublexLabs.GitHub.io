@@ -1,6 +1,6 @@
 {
   "label": "CubDialogs",
-  "position": 4,
+  "position": 2,
   "link": {
     "type": "generated-index",
     "description": "CubDialogs is a modern and lightweight Minecraft plugin developed by Cublex Labs, designed to make creating interactive dialogs for your server effortless. Built on the Paper API (1.21.8) and leveraging the new Minecraft Native Dialog System introduced in Java Edition 1.21.6, CubDialogs allows you to create dynamic conversations, customizable options, and player-driven narratives — all through simple YAML configurations or via its API."
