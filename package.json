@@ -1,6 +1,6 @@
 {
-  "name": "minecraft-plugins",
-  "version": "0.0.0",
+  "name": "cublex-labs",
+  "version": "1.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
