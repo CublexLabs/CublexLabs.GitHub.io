@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { UI_CONFIG } from '@site/src/config/ui';
 
 interface Particle {
     x: number;
@@ -13,6 +14,7 @@ interface Particle {
 
 export default function AmbientBackground() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    const config = UI_CONFIG.ambientBackground;
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -38,12 +40,12 @@ export default function AmbientBackground() {
             if (!textCtx) return;
 
             // 2. Draw text
-            const fontSize = Math.min(canvas.width / 6, 200);
+            const fontSize = Math.min(canvas.width / config.fontSizeDivisor, config.maxFontSize);
             textCtx.font = `900 ${fontSize}px "Inter", sans-serif`;
             textCtx.fillStyle = 'white';
             textCtx.textAlign = 'center';
             textCtx.textBaseline = 'middle';
-            textCtx.fillText('CUBLEX', canvas.width / 2, canvas.height / 2);
+            textCtx.fillText(config.text, canvas.width / 2, canvas.height / 2);
 
             // 3. Get pixel data
             const imageData = textCtx.getImageData(0, 0, canvas.width, canvas.height);
@@ -51,8 +53,7 @@ export default function AmbientBackground() {
 
             particles = [];
             // 4. Sample pixels to create target points
-            // Step size determines density (higher = fewer particles)
-            const step = 6;
+            const step = config.particleDensity;
 
             for (let y = 0; y < canvas.height; y += step) {
                 for (let x = 0; x < canvas.width; x += step) {
@@ -68,7 +69,7 @@ export default function AmbientBackground() {
                             vy: 0,
                             size: Math.random() * 2 + 1,
                             // Randomly pick brand colors
-                            color: Math.random() > 0.5 ? '#06b6d4' : '#8b5cf6' // Cyan or Violet
+                            color: Math.random() > 0.5 ? config.colors[0] : config.colors[1]
                         });
                     }
                 }
@@ -76,38 +77,34 @@ export default function AmbientBackground() {
         };
 
         const animate = () => {
-            // Clear with slight fade for trail effect? No, clean clear for this style.
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             particles.forEach(p => {
                 // Physics vars
                 const dx = p.targetX - p.x;
                 const dy = p.targetY - p.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
 
                 // Mouse interaction
                 const mDx = mouseX - p.x;
                 const mDy = mouseY - p.y;
                 const mDist = Math.sqrt(mDx * mDx + mDy * mDy);
-                const repulsionRadius = 100;
 
                 let forceX = 0;
                 let forceY = 0;
 
-                if (mDist < repulsionRadius) {
-                    const force = (repulsionRadius - mDist) / repulsionRadius;
-                    forceX = -mDx * force * 5; // Repel strength
-                    forceY = -mDy * force * 5;
+                if (mDist < config.repulsionRadius) {
+                    const force = (config.repulsionRadius - mDist) / config.repulsionRadius;
+                    forceX = -mDx * force * config.repulsionStrength;
+                    forceY = -mDy * force * config.repulsionStrength;
                 }
 
                 // Spring-like attraction to target
-                const speed = 0.05;
-                p.vx += dx * speed * 0.1 + forceX;
-                p.vy += dy * speed * 0.1 + forceY;
+                p.vx += dx * config.returnSpeed * 0.1 + forceX;
+                p.vy += dy * config.returnSpeed * 0.1 + forceY;
 
                 // Friction
-                p.vx *= 0.85;
-                p.vy *= 0.85;
+                p.vx *= config.friction;
+                p.vy *= config.friction;
 
                 p.x += p.vx;
                 p.y += p.vy;
@@ -118,9 +115,6 @@ export default function AmbientBackground() {
                 ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
                 ctx.fill();
             });
-
-            // Connect nearby particles (optional, expensive)
-            // For now, just dots looks cleaner and is faster.
 
             animationFrameId = requestAnimationFrame(animate);
         };
@@ -157,9 +151,9 @@ export default function AmbientBackground() {
                 left: 0,
                 width: '100%',
                 height: '100%',
-                pointerEvents: 'none', // Let clicks pass through
+                pointerEvents: 'none',
                 zIndex: 0,
-                opacity: 0.6 // Subtle background
+                opacity: config.opacity
             }}
         />
     );
