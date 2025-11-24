@@ -1,5 +1,7 @@
 export const UI_CONFIG = {
     ambientBackground: {
+        enabled: true,
+        type: 'particlesText' as 'particlesText', // Add more types here later
         text: 'cublex labs',
         colors: ['#06b6d4', '#8b5cf6'], // Cyan, Violet
         particleDensity: 6, // Lower is denser (step size)
