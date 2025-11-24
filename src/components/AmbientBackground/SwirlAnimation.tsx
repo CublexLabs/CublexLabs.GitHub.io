@@ -2,6 +2,16 @@ import React, { useEffect, useRef } from 'react';
 import { createNoise3D } from 'simplex-noise';
 import { UI_CONFIG } from '@site/src/config/ui';
 
+/**
+ * Swirl Animation Component
+ * 
+ * Based on the "Swirl" effect from Ambient Canvas Backgrounds by Codrops
+ * Original source: https://github.com/crnacura/AmbientCanvasBackgrounds
+ * 
+ * Adapted for React with theme support and configuration options.
+ */
+
+
 const { PI, cos, sin, abs, random } = Math;
 const TAU = 2 * PI;
 const rand = (n: number) => n * random();
@@ -16,6 +26,27 @@ export default function SwirlAnimation() {
     const canvasARef = useRef<HTMLCanvasElement>(null);
     const canvasBRef = useRef<HTMLCanvasElement>(null);
     const config = UI_CONFIG.ambientBackground.swirl;
+
+    // Detect theme with state to trigger re-render
+    const [isDarkMode, setIsDarkMode] = React.useState(() => 
+        typeof document !== 'undefined' && document.documentElement.getAttribute('data-theme') === 'dark'
+    );
+    const themeConfig = isDarkMode ? config.dark : config.light;
+
+    // Watch for theme changes
+    useEffect(() => {
+        const observer = new MutationObserver(() => {
+            const newIsDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            setIsDarkMode(newIsDark);
+        });
+
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        });
+
+        return () => observer.disconnect();
+    }, []);
 
     useEffect(() => {
         const canvasA = canvasARef.current;
@@ -46,7 +77,7 @@ export default function SwirlAnimation() {
             ttl = config.baseTTL + rand(config.rangeTTL);
             speed = config.baseSpeed + rand(config.rangeSpeed);
             radius = config.baseRadius + rand(config.rangeRadius);
-            hue = config.baseHue + rand(config.rangeHue);
+            hue = themeConfig.baseHue + rand(themeConfig.rangeHue);
 
             particleProps.set([x, y, vx, vy, life, ttl, speed, radius, hue], i);
         };
@@ -64,7 +95,7 @@ export default function SwirlAnimation() {
             ctxA.save();
             ctxA.lineCap = 'round';
             ctxA.lineWidth = radius;
-            ctxA.strokeStyle = `hsla(${hue},100%,60%,${fadeInOut(life, ttl)})`;
+            ctxA.strokeStyle = `hsla(${hue},${themeConfig.saturation}%,${themeConfig.lightness}%,${fadeInOut(life, ttl)})`;
             ctxA.beginPath();
             ctxA.moveTo(x, y);
             ctxA.lineTo(x2, y2);
@@ -144,7 +175,7 @@ export default function SwirlAnimation() {
 
             ctxA.clearRect(0, 0, canvasA.width, canvasA.height);
 
-            ctxB.fillStyle = config.backgroundColor;
+            ctxB.fillStyle = themeConfig.backgroundColor;
             ctxB.fillRect(0, 0, canvasA.width, canvasA.height);
 
             drawParticles();
@@ -177,7 +208,7 @@ export default function SwirlAnimation() {
             window.removeEventListener('resize', handleResize);
             cancelAnimationFrame(animationFrameId);
         };
-    }, []);
+    }, [themeConfig]);
 
     return (
         <>

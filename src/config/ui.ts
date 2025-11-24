@@ -12,13 +12,26 @@ export const UI_CONFIG = {
             rangeSpeed: 2,
             baseRadius: 1,
             rangeRadius: 4,
-            baseHue: 220,
-            rangeHue: 100,
+            // Dark mode colors
+            dark: {
+                baseHue: 220,
+                rangeHue: 100,
+                backgroundColor: 'hsla(260,40%,5%,1)',
+                saturation: 100,
+                lightness: 60,
+            },
+            // Light mode colors
+            light: {
+                baseHue: 220,
+                rangeHue: 100,
+                backgroundColor: 'hsla(220,40%,98%,1)',
+                saturation: 80,
+                lightness: 40,
+            },
             noiseSteps: 8,
             xOff: 0.00125,
             yOff: 0.00125,
             zOff: 0.0005,
-            backgroundColor: 'hsla(260,40%,5%,1)',
         },
         colors: ['#06b6d4', '#8b5cf6'], // Cyan, Violet
         particleDensity: 6, // Lower is denser (step size)
