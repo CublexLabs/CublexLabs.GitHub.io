@@ -7,7 +7,7 @@ export const UI_CONFIG = {
         repulsionStrength: 6, // How hard particles are pushed
         returnSpeed: 0.035, // How fast particles return to original position
         friction: 0.85, // Movement damping
-        fontSizeDivisor: 12, // Canvas width / this = font size
+        fontSizeDivisor: 8, // Canvas width / this = font size
         maxFontSize: 200,
         opacity: 0.8,
         scrollBehavior: 'rigid', // 'rigid' (instant) or 'physics' (smooth/laggy)
