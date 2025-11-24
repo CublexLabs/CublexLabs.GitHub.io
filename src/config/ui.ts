@@ -10,6 +10,9 @@ export const UI_CONFIG = {
         fontSizeDivisor: 12, // Canvas width / this = font size
         maxFontSize: 200,
         opacity: 0.8,
+        scrollBehavior: 'rigid', // 'rigid' (instant) or 'physics' (smooth/laggy)
+        navbarHeight: 80, // Height of the navbar to anchor below
+        anchorPadding: 20, // Extra padding below navbar
     },
     // Add other component configs here as needed
 };

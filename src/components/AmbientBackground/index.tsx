@@ -6,6 +6,7 @@ interface Particle {
     y: number;
     targetX: number;
     targetY: number;
+    baseTargetY: number; // Original Y position
     vx: number;
     vy: number;
     size: number;
@@ -65,6 +66,7 @@ export default function AmbientBackground() {
                             y: Math.random() * canvas.height,
                             targetX: x,
                             targetY: y,
+                            baseTargetY: y,
                             vx: 0,
                             vy: 0,
                             size: Math.random() * 2 + 1,
@@ -79,14 +81,51 @@ export default function AmbientBackground() {
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+            // Calculate vertical shift based on scroll
+            const scrollY = window.scrollY;
+            const navbarHeight = config.navbarHeight || 80;
+            const anchorPadding = config.anchorPadding || 20;
+            const fontSize = Math.min(canvas.width / config.fontSizeDivisor, config.maxFontSize);
+            
+            // We want the text to move up with scroll, but stop at navbar
+            const minCenterY = navbarHeight + fontSize / 2 + anchorPadding;
+            const currentCenterY = (canvas.height / 2) - scrollY;
+            const clampedCenterY = Math.max(minCenterY, currentCenterY);
+            const verticalShift = clampedCenterY - (canvas.height / 2);
+
+            const isRigid = config.scrollBehavior === 'rigid';
+
             particles.forEach(p => {
+                // Determine the effective target Y for physics
+                // If rigid, targetY is just baseTargetY (physics happens in local space)
+                // If physics, targetY includes the shift (physics chases the shift)
+                let effectiveTargetY = p.baseTargetY;
+                if (!isRigid) {
+                    effectiveTargetY += verticalShift;
+                }
+                
+                p.targetY = effectiveTargetY;
+
                 // Physics vars
                 const dx = p.targetX - p.x;
                 const dy = p.targetY - p.y;
 
                 // Mouse interaction
-                const mDx = mouseX - p.x;
-                const mDy = mouseY - p.y;
+                // If rigid, we need to adjust mouse coordinates to be relative to the shifted particle
+                // Or adjust particle coordinates to be relative to screen mouse
+                // Let's render at (p.x, p.y + verticalShift) if rigid.
+                // So the particle is visually at p.y + verticalShift.
+                // Mouse is at mouseY.
+                // Distance = mouseY - (p.y + verticalShift)
+                
+                let renderX = p.x;
+                let renderY = p.y;
+                if (isRigid) {
+                    renderY += verticalShift;
+                }
+
+                const mDx = mouseX - renderX;
+                const mDy = mouseY - renderY;
                 const mDist = Math.sqrt(mDx * mDx + mDy * mDy);
 
                 let forceX = 0;
@@ -112,7 +151,7 @@ export default function AmbientBackground() {
                 // Draw
                 ctx.fillStyle = p.color;
                 ctx.beginPath();
-                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.arc(renderX, renderY, p.size, 0, Math.PI * 2);
                 ctx.fill();
             });
 
