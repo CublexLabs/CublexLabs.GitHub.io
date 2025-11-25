@@ -67,6 +67,25 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      './src/plugins/project-data',
+      {
+        // Plugin options here
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'projects',
+        path: 'projects',
+        routeBasePath: 'projects',
+        sidebarPath: false, // No sidebar for projects for now, or we can add one later
+        // editUrl: ...
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: "img/social-card.jpg",

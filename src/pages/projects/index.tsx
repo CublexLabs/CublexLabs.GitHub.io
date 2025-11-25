@@ -2,18 +2,24 @@ import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import FeaturedProject from '@site/src/components/Projects/FeaturedProject';
 import ProjectCard from '@site/src/components/Projects/ProjectCard';
-import { PROJECTS, FEATURED_PROJECT } from '@site/src/data/projects';
+import useGlobalData from '@docusaurus/useGlobalData';
 
 const FILTERS = ['All', 'Game Dev', 'Web Tools', 'Plugins', 'Experiments', 'Utility'];
 
 export default function Projects() {
     const [activeFilter, setActiveFilter] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
+    
+    const globalData = useGlobalData();
+    const projectData = globalData['project-data-plugin']?.default as any[] || [];
 
-    const filteredProjects = PROJECTS.filter(project => {
+    const featuredProject = projectData.find(p => p.featured);
+    const projects = projectData.filter(p => !p.featured);
+
+    const filteredProjects = projects.filter(project => {
         const matchesFilter = activeFilter === 'All' ||
             (project.category && project.category === activeFilter) ||
-            project.tags.some(tag => tag.includes(activeFilter));
+            (project.tags && project.tags.some(tag => tag.includes(activeFilter)));
         const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             project.description.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesFilter && matchesSearch;
@@ -65,7 +71,7 @@ export default function Projects() {
 
                 <div className="container">
                     {/* Featured Project */}
-                    <FeaturedProject {...FEATURED_PROJECT} />
+                    {featuredProject && <FeaturedProject {...featuredProject} />}
 
                     {/* Project Grid */}
                     <div className="project-grid" style={{ marginBottom: '4rem' }}>
