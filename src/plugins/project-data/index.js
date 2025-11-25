@@ -38,5 +38,12 @@ module.exports = async function projectDataPlugin(context, options) {
       const { setGlobalData } = actions;
       setGlobalData(content);
     },
+
+    getPathsToWatch() {
+      const projectsDir = path.join(context.siteDir, 'projects');
+      return [
+        path.join(projectsDir, '**/*.{md,mdx}'),
+      ];
+    },
   };
 };

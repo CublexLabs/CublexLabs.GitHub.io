@@ -87,7 +87,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: "img/social-card.jpg",
     navbar: {
       title: "CublexLabs",
@@ -139,14 +138,22 @@ const config: Config = {
       ],
     },
     footer: {
-      style: "dark",
+      //style: "dark",
       links: [
         {
           title: "Pages",
           items: [
             {
-              label: "Main Page",
+              label: "Home",
               to: "/",
+            },
+            {
+              label: "Projects",
+              to: "/projects",
+            },
+            {
+              label: "Blog",
+              to: "/blog",
             },
             {
               label: "Wiki",
@@ -155,8 +162,12 @@ const config: Config = {
           ],
         },
         {
-          title: "Marketplaces",
+          title: "Profile",
           items: [
+            {
+              label: "GitHub",
+              href: "https://github.com/CublexLabs",
+            },
             {
               label: "SpigotMC",
               href: "https://www.spigotmc.org/resources/authors/394490/",
@@ -181,19 +192,6 @@ const config: Config = {
             {
               label: "YouTube",
               href: "https://www.youtube.com/CublexLabs/",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            {
-              label: "Blog",
-              to: "/blog",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/CublexLabs",
             },
           ],
         },
