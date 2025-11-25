@@ -81,11 +81,70 @@ body {
   /* Prevent scrollbar from animation overflow */
 }
 
-/* Navbar Glassmorphism */
+/* Navbar Glassmorphism 
 .navbar {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--cublex-border);
+}*/
+
+/* Navbar Dropdown Fixes for Mobile */
+.navbar__item.dropdown .navbar__link:after {
+  border-color: currentColor transparent;
+}
+
+/* Ensure dropdowns work on mobile */
+.navbar-sidebar {
+  z-index: 100;
+}
+
+.navbar-sidebar__item {
+  padding: 0;
+}
+
+.navbar-sidebar .menu__link {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+}
+
+/* Fix for dropdown expansion in mobile sidebar */
+.navbar-sidebar .menu__list-item-collapsible {
+  position: relative;
+}
+
+.navbar-sidebar .menu__list-item-collapsible .menu__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-sidebar .menu__list-item-collapsible .menu__caret {
+  transition: transform 0.2s ease;
+}
+
+.navbar-sidebar .menu__list-item-collapsible.menu__list-item--collapsed .menu__caret {
+  transform: rotate(-90deg);
+}
+
+/* Ensure nested menu items are visible when expanded */
+.navbar-sidebar .menu__list {
+  max-height: none;
+  overflow: visible;
+}
+
+.navbar-sidebar .menu__list .menu__list {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Touch-friendly tap targets */
+.navbar-sidebar .menu__link,
+.navbar-sidebar .menu__list-item-collapsible {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 
 /* Hero Section */
