@@ -174,8 +174,14 @@ export default function ParticlesTextAnimation() {
             animationFrameId = requestAnimationFrame(animate);
         };
 
+        let prevWidth = window.innerWidth;
+
         const handleResize = () => {
-            init();
+            const currentWidth = window.innerWidth;
+            if (currentWidth !== prevWidth) {
+                prevWidth = currentWidth;
+                init();
+            }
         };
 
         const handleMouseMove = (e: MouseEvent) => {
