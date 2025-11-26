@@ -99,16 +99,6 @@ const config: Config = {
           position: "left",
         },
         {
-          href: "https://discord.gg/Hqq3CdnenN",
-          label: "Join us on Discord",
-          position: "right",
-        },
-        {
-          href: "https://github.com/CublexLabs",
-          label: "Contribute on GitHub",
-          position: "right",
-        },
-        {
           type: "localeDropdown",
           position: "right",
         },
