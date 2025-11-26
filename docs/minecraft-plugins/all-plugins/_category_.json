@@ -1,8 +1,8 @@
 {
-  "label": "Common in all plugins",
+  "label": "CublexCore",
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "This stuff is common for all plugins. They come from Cub, the Core Plugin of the ecosystem."
+    "description": "These features are common in all plugins. They come from CublexCore, the Core Plugin of the ecosystem."
   }
 }
