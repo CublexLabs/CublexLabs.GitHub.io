@@ -41,12 +41,28 @@ export default function ParticlesTextAnimation() {
             if (!textCtx) return;
 
             // 2. Draw text
-            const fontSize = Math.min(canvas.width / config.fontSizeDivisor, config.maxFontSize);
+            const isVertical = canvas.height > canvas.width;
+            const textToRender = isVertical ? config.text.split(' ') : [config.text];
+
+            // Adjust font size for vertical mode if needed, or keep dynamic
+            let fontSize = Math.min(canvas.width / config.fontSizeDivisor, config.maxFontSize);
+            if (isVertical) {
+                // Make font slightly larger on mobile/vertical relative to width since we have more vertical space
+                fontSize = Math.min(canvas.width / (config.fontSizeDivisor / 1.5), config.maxFontSize);
+            }
+
             textCtx.font = `900 ${fontSize}px "Inter", sans-serif`;
             textCtx.fillStyle = 'white';
             textCtx.textAlign = 'center';
             textCtx.textBaseline = 'middle';
-            textCtx.fillText(config.text, canvas.width / 2, canvas.height / 2);
+
+            const lineHeight = fontSize * 1.2;
+            const totalHeight = textToRender.length * lineHeight;
+            const startY = (canvas.height / 2) - (totalHeight / 2) + (lineHeight / 2);
+
+            textToRender.forEach((line, index) => {
+                textCtx.fillText(line, canvas.width / 2, startY + (index * lineHeight));
+            });
 
             // 3. Get pixel data
             const imageData = textCtx.getImageData(0, 0, canvas.width, canvas.height);
@@ -86,7 +102,7 @@ export default function ParticlesTextAnimation() {
             const navbarHeight = config.navbarHeight || 80;
             const anchorPadding = config.anchorPadding || 20;
             const fontSize = Math.min(canvas.width / config.fontSizeDivisor, config.maxFontSize);
-            
+
             // We want the text to move up with scroll, but stop at navbar
             const minCenterY = navbarHeight + fontSize / 2 + anchorPadding;
             const currentCenterY = (canvas.height / 2) - scrollY;
@@ -103,7 +119,7 @@ export default function ParticlesTextAnimation() {
                 if (!isRigid) {
                     effectiveTargetY += verticalShift;
                 }
-                
+
                 p.targetY = effectiveTargetY;
 
                 // Physics vars
@@ -117,7 +133,7 @@ export default function ParticlesTextAnimation() {
                 // So the particle is visually at p.y + verticalShift.
                 // Mouse is at mouseY.
                 // Distance = mouseY - (p.y + verticalShift)
-                
+
                 let renderX = p.x;
                 let renderY = p.y;
                 if (isRigid) {
