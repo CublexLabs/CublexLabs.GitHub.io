@@ -24,8 +24,8 @@ export default function FeaturedProject({ title, description, category, version,
                         <span style={{ marginRight: '0.25rem' }}>⑂</span> {version}
                     </span>
                 </div>
-                <h2 className="hero-title" style={{ fontSize: '2.5rem', textAlign: 'left', marginBottom: '1rem' }}>{title}</h2>
-                <p className="feature-description" style={{ fontSize: '1.1rem', marginBottom: '2rem' }}>
+                <h2 className="hero-title" style={{ fontSize: '1.4rem', textAlign: 'left', marginBottom: '0.6rem' }}>{title}</h2>
+                <p className="feature-description" style={{ fontSize: '0.8rem', marginBottom: '0.8rem' }}>
                     {description}
                 </p>
                 <div>
@@ -36,7 +36,7 @@ export default function FeaturedProject({ title, description, category, version,
             </div>
 
             <div className="featured-image-container">
-                <div className="featured-overlay" style={{ zIndex: 2 }}></div>
+                <div className="featured-overlay" style={{ zIndex: 2}}></div>
                 <img src={image} alt={title} className="featured-image" />
             </div>
         </div>
