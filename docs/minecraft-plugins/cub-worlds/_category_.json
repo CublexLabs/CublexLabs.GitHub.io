@@ -1,0 +1,8 @@
+{
+  "label": "CubWorlds",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "CubWorlds is a modern and lightweight Minecraft plugin developed by Cublex Labs, designed to manage multiple worlds on your server."
+  }
+}
