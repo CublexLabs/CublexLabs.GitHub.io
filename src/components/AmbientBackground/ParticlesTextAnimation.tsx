@@ -191,14 +191,22 @@ export default function ParticlesTextAnimation() {
         };
 
         window.addEventListener('resize', handleResize);
-        window.addEventListener('mousemove', handleMouseMove);
+        
+        // Check if device has touch capability (coarse pointer)
+        const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+        
+        if (!isTouchDevice) {
+            window.addEventListener('mousemove', handleMouseMove);
+        }
 
         init();
         animate();
 
         return () => {
             window.removeEventListener('resize', handleResize);
-            window.removeEventListener('mousemove', handleMouseMove);
+            if (!isTouchDevice) {
+                window.removeEventListener('mousemove', handleMouseMove);
+            }
             cancelAnimationFrame(animationFrameId);
         };
     }, []);
