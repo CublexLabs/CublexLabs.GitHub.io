@@ -214,6 +214,7 @@ export default function ParticlesTextAnimation() {
     return (
         <canvas
             ref={canvasRef}
+            className="ambient-canvas"
             style={{
                 position: 'fixed',
                 top: 0,

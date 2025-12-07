@@ -27,5 +27,5 @@ export default function BackgroundAnimation() {
         };
     }, []);
 
-    return <div ref={glowRef} className="cursor-glow" />;
+    return <div ref={glowRef} className="cursor-glow ambient-canvas" />;
 }

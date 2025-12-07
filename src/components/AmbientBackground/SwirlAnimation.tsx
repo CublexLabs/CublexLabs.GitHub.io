@@ -220,6 +220,7 @@ export default function SwirlAnimation() {
             />
             <canvas
                 ref={canvasBRef}
+                className="ambient-canvas"
                 style={{
                     position: 'fixed',
                     top: 0,

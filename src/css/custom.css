@@ -177,6 +177,24 @@ body {
   font-weight: 400;
 }
 
+.hero-content-glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 2rem;
+  padding: 4rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+[data-theme='dark'] .hero-content-glass {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
 /* Feature Cards */
 .features-section {
   padding: 6rem 0;
@@ -554,64 +572,7 @@ body {
   }
 }
 
-/* Mobile Responsiveness Overrides */
-@media (max-width: 768px) {
 
-  /* Typography Scaling */
-  .hero-title {
-    font-size: 3rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.125rem;
-  }
-
-  .lab-title {
-    font-size: 3rem;
-  }
-
-  .section-title {
-    font-size: 2.25rem;
-  }
-
-  /* Layout Adjustments */
-  .hero-section {
-    padding: 6rem 0 4rem;
-  }
-
-  .features-section {
-    padding: 4rem 0;
-  }
-
-  .feature-card {
-    padding: 1.5rem;
-  }
-
-  .grid-3,
-  .grid-2 {
-    grid-template-columns: 1fr;
-    /* Force single column on mobile */
-    gap: 1.5rem;
-  }
-
-  .cta-button {
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-
-  .cta-button-secondary {
-    width: 100%;
-    justify-content: center;
-    margin-left: 0;
-  }
-
-  .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    padding: 0 1rem;
-  }
-}
 
 /* Section Headers */
 .section-header {
@@ -734,4 +695,75 @@ main,
 footer {
   position: relative;
   z-index: 1;
+}
+
+/* Mobile Responsiveness Overrides */
+@media (max-width: 768px) {
+
+  /* Typography Scaling */
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .lab-title {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+  }
+
+  /* Layout Adjustments */
+  .hero-section {
+    padding: 6rem 0 4rem;
+  }
+
+  .hero-content-glass {
+    padding: 2rem;
+    border-radius: 1.5rem;
+  }
+
+  .features-section {
+    padding: 4rem 0;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+    /* Force single column on mobile */
+    gap: 1.5rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .cta-button-secondary {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Fix for centering buttons */
+    padding: 0 1rem;
+  }
+
+  /* Hide background animations on mobile to prevent overlap */
+  .ambient-canvas,
+  .cursor-glow {
+    display: none !important;
+  }
 }
