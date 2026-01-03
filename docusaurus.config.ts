@@ -6,7 +6,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Kukso Studios",
-  tagline: "Tools for creators. Worlds for players.",
+  tagline: "We cook what you enjoy.",
   favicon: "brand/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -14,11 +14,11 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  url: "https://labs.kukso.net",
+  url: "https://kukso.com",
   baseUrl: "/",
 
-  organizationName: "CublexLabs",
-  projectName: "CublexLabs.GitHub.io",
+  organizationName: "KuksoHQ",
+  projectName: "KuksoHQ.GitHub.io",
 
   deploymentBranch: "gh-pages",
 
@@ -70,10 +70,12 @@ const config: Config = {
   themeConfig: {
     image: "meta/social_card.png",
     navbar: {
-      title: "Kukso Studios",
+      title: '',
       logo: {
         alt: "Kukso Studios Logo",
-        src: "brand/logo.svg",
+        src: "brand/logo_k.png",
+        // width: 32,
+        // height: 32,
       },
       items: [
         {

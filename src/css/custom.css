@@ -840,3 +840,8 @@ footer {
     display: none !important;
   }
 }
+
+/* Navbar Logo Adjustment */
+.navbar__logo {
+  height: 2.8rem; /* Increased size */
+}
