@@ -25,15 +25,25 @@ export default function Projects() {
                 {/* Hero Section */}
                 <section className="lab-hero">
                     <div className="container">
-                        <div className="row">
-                            <div className="col col--7">
+                        {/* Header Row: Title (Left) + Featured Project (Right) */}
+                        <div className="row" style={{ alignItems: 'center', marginBottom: '2rem' }}>
+                            <div className="col col--6">
                                 <span className="lab-path">~/projects</span>
                                 <h1 className="lab-title">The Laboratory</h1>
                                 <p className="lab-subtitle">
                                     A curated collection of experiments, production services, and indie titles built by Kukso Studios.
                                 </p>
+                            </div>
+                            <div className="col col--6">
+                                <div className="featured-header-wrapper">
+                                    <FeaturedProject {...FEATURED_PROJECT} />
+                                </div>
+                            </div>
+                        </div>
 
-                                {/* Filter Rail moved inside Hero */}
+                        {/* Controls Row: Filters (Left) + Search (Right) */}
+                        <div className="row" style={{ alignItems: 'center' }}>
+                            <div className="col col--8">
                                 <div className="lab-filter-rail">
                                     {FILTERS.map((filter) => (
                                         <button
@@ -46,9 +56,8 @@ export default function Projects() {
                                     ))}
                                 </div>
                             </div>
-
-                            <div className="col col--5" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
-                                <div className="lab-search-container">
+                            <div className="col col--4" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                                <div className="lab-search-container" style={{ width: '100%' }}>
                                     <span className="lab-search-icon">🔍</span>
                                     <input
                                         type="text"
@@ -64,9 +73,6 @@ export default function Projects() {
                 </section>
 
                 <div className="container">
-                    {/* Featured Project */}
-                    <FeaturedProject {...FEATURED_PROJECT} />
-
                     {/* Project Grid */}
                     <div className="project-grid" style={{ marginBottom: '4rem' }}>
                         {filteredProjects.map((project, idx) => (
