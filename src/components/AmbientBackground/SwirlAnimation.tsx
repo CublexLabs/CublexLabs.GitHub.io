@@ -151,21 +151,21 @@ export default function SwirlAnimation() {
 
         const renderGlow = () => {
             ctxB.save();
-            ctxB.filter = 'blur(8px) brightness(200%)';
-            ctxB.globalCompositeOperation = 'lighter';
+            ctxB.filter = isDarkMode ? 'blur(8px) brightness(200%)' : 'blur(8px)';
+            ctxB.globalCompositeOperation = isDarkMode ? 'lighter' : 'source-over';
             ctxB.drawImage(canvasA, 0, 0);
             ctxB.restore();
 
             ctxB.save();
-            ctxB.filter = 'blur(4px) brightness(200%)';
-            ctxB.globalCompositeOperation = 'lighter';
+            ctxB.filter = isDarkMode ? 'blur(4px) brightness(200%)' : 'blur(4px)';
+            ctxB.globalCompositeOperation = isDarkMode ? 'lighter' : 'source-over';
             ctxB.drawImage(canvasA, 0, 0);
             ctxB.restore();
         };
 
         const renderToScreen = () => {
             ctxB.save();
-            ctxB.globalCompositeOperation = 'lighter';
+            ctxB.globalCompositeOperation = isDarkMode ? 'lighter' : 'source-over';
             ctxB.drawImage(canvasA, 0, 0);
             ctxB.restore();
         };

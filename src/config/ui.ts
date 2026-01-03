@@ -1,8 +1,8 @@
 export const UI_CONFIG = {
     ambientBackground: {
         enabled: true,
-        type: 'particlesText' as 'particlesText' | 'swirl', // Add more types here later
-        text: 'cublex labs',
+        type: 'swirl' as 'particlesText' | 'swirl', // Add more types here later
+        text: 'Kukso Studios',
         swirl: {
             particleCount: 700,
             rangeY: 100,
@@ -25,8 +25,8 @@ export const UI_CONFIG = {
                 baseHue: 220,
                 rangeHue: 100,
                 backgroundColor: 'hsla(220,40%,98%,1)',
-                saturation: 80,
-                lightness: 40,
+                saturation: 0, // Grayscale
+                lightness: 20, // Dark grey/black for visibility
             },
             noiseSteps: 8,
             xOff: 0.00125,
