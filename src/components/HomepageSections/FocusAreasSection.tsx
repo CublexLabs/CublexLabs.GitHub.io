@@ -4,19 +4,14 @@ import PixelCard from '../UI/PixelCard';
 export default function FocusAreasSection() {
     const areas = [
         {
-            title: 'Cross-Platform Development',
-            description: 'Seamless experiences across web, mobile, and game environments.',
-            icon: '📱',
-        },
-        {
             title: 'AI-Assisted Development',
-            description: 'Leveraging cutting-edge AI to accelerate MVP cycles and innovation.',
+            description: 'Leveraging AI to accelerate MVP cycles and innovation. As engineers, we understand the importance of AI in the development process.',
             icon: '🤖',
         },
         {
-            title: 'Kukso Ecosystem',
-            description: 'A consistent, interconnected brand ecosystem across all our products.',
-            icon: '🔗',
+            title: 'Cross-Platform Development',
+            description: 'Seamless experiences across web, mobile, and game environments. Frameworks like React, React Native and Unity are used to create cross-platform applications.',
+            icon: '📱',
         },
     ];
 

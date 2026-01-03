@@ -4,19 +4,19 @@ import PixelCard from '../UI/PixelCard';
 export default function WhatWeDoSection() {
     const items = [
         {
-            title: 'High-Utility Tools',
-            description: 'Solving real problems for developers and creators with robust, reliable software.',
-            icon: '🛠️',
+            title: 'Minecraft Plugins',
+            description: 'Creating high-quality plugins for Minecraft servers.',
+            icon: '🧊',
         },
         {
-            title: 'Experimental Projects',
-            description: 'Testing new ideas and pushing boundaries in gaming and software development.',
-            icon: '🧪',
-        },
-        {
-            title: 'Community Ecosystems',
-            description: 'Building thriving communities around Minecraft, Hytale, and Unity indie scenes.',
+            title: 'Hytale Mods',
+            description: 'Creating high-quality mods for Hytale.',
             icon: '🌍',
+        },
+        {
+            title: 'Mobile Apps',
+            description: 'Creating high-quality mobile apps for Android and iOS.',
+            icon: '📱',
         },
     ];
 

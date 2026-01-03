@@ -9,7 +9,7 @@ export default function ContactSection() {
                 <PixelCard>
                     <div className="section-header">
                         <span className="section-tagline">Get In Touch</span>
-                        <h2 className="section-title">Join The Network</h2>
+                        <h2 className="section-title">Join The Club</h2>
                     </div>
                     <div className="grid-2" style={{ alignItems: 'center' }}>
                         {/* Contact Column */}
@@ -19,11 +19,11 @@ export default function ContactSection() {
                                 Have a project in mind or just want to say hello? We are always open to new ideas and collaborations.
                             </p>
                             <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', flexWrap: 'wrap' }}>
-                                <Link to="mailto:contact@kukso.studio" className="cta-button cta-button-secondary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
+                                <Link to="mailto:info@kukso.com" className="cta-button cta-button-secondary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
                                     📧 Email Us
                                 </Link>
-                                <Link to="https://twitter.com/KuksoStudios" className="cta-button cta-button-secondary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
-                                    🐦 Twitter / X
+                                <Link to="https://x.com/KuksoHQ" className="cta-button cta-button-secondary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
+                                    🐦 X
                                 </Link>
                                 <Link to="https://discord.gg/Hqq3CdnenN" className="cta-button cta-button-secondary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
                                     💬 Discord
@@ -35,7 +35,7 @@ export default function ContactSection() {
                         <div className="feature-card" style={{ display: 'block' }}>
                             <h3 className="feature-title">Newsletter</h3>
                             <p className="feature-description" style={{ marginBottom: '1.5rem' }}>
-                                Subscribe to get early access to our tools, game updates, and exclusive dev logs. No spam, just pixels.
+                                Subscribe to get early access to our products, game updates, and exclusive dev-logs.
                             </p>
                             <form 
                                 action="#" // Placeholder for now
@@ -67,7 +67,7 @@ export default function ContactSection() {
                                     </button>
                                 </div>
                                 <span style={{ fontSize: '0.75rem', opacity: 0.7 }}>
-                                    By subscribing, you agree to our Privacy Policy.
+                                    By subscribing, you agree to our <Link to="/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Privacy Policy</Link>.
                                 </span>
                             </form>
                         </div>

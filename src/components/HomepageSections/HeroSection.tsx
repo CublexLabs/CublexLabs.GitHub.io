@@ -58,7 +58,7 @@ export default function HeroSection() {
                             <Link
                                 className="cta-button cta-button-secondary"
                                 to="/#contact">
-                                Request Custom Works
+                                Work With Me
                             </Link>
                             <Link
                                 className="cta-button cta-button-secondary"
