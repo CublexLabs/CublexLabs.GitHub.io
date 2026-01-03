@@ -600,6 +600,8 @@ body {
 .status-live { background: rgba(16, 185, 129, 0.9); }
 .status-beta { background: rgba(245, 158, 11, 0.9); }
 .status-alpha { background: rgba(139, 92, 246, 0.9); }
+.price-free { background: rgba(56, 189, 248, 0.9); } /* Sky Blue */
+.price-paid { background: rgba(234, 179, 8, 0.9); }  /* Yellow/Gold */
 
 
 /* Content Overlay */

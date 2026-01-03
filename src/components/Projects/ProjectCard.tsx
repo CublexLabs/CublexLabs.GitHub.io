@@ -7,16 +7,22 @@ export interface ProjectCardProps {
     description: string;
     tags: string[];
     status: 'Live' | 'Beta' | 'Alpha';
+    price?: 'Free' | 'Paid';
     image: string;
     link?: string;
     category?: string;
 }
 
-export default function ProjectCard({ title, description, tags, status, image, link, category }: ProjectCardProps) {
+export default function ProjectCard({ title, description, tags, status, price, image, link, category }: ProjectCardProps) {
     const statusClass = clsx('project-status', {
         'status-live': status === 'Live',
         'status-beta': status === 'Beta',
         'status-alpha': status === 'Alpha',
+    });
+
+    const priceClass = clsx('project-status', {
+        'price-free': price === 'Free',
+        'price-paid': price === 'Paid',
     });
 
     return (
@@ -31,6 +37,7 @@ export default function ProjectCard({ title, description, tags, status, image, l
                 <div className="project-badges-overlay">
                     {category && <span className="project-tag-glass">{category}</span>}
                     <div className={statusClass}>{status}</div>
+                    {price && <div className={priceClass}>{price}</div>}
                 </div>
 
                 {/* Bottom Overlay Content */}
