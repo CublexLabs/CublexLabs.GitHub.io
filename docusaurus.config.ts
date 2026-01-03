@@ -80,7 +80,7 @@ const config: Config = {
       items: [
         {
           to: "/",
-          label: "Home",
+          label: "Homepage",
           position: "left",
           activeBaseRegex: "^/$",
         },
@@ -89,21 +89,21 @@ const config: Config = {
           label: "Projects",
           position: "left",
         },
-        {
-          to: "/blog",
-          label: "Blog",
-          position: "left",
-        },
+        // {
+        //   to: "/blog",
+        //   label: "Blog",
+        //   position: "left",
+        // },
         {
           type: "docSidebar",
-          sidebarId: "wikiSidebar",
-          label: "Wiki",
+          sidebarId: "docSidebar",
+          label: "Docs",
           position: "left",
         },
-        {
-          type: "localeDropdown",
-          position: "right",
-        },
+        // {
+        //   type: "localeDropdown",
+        //   position: "right",
+        // },
         // {
         //   type: "docsVersionDropdown",
         //   position: "right",
@@ -112,34 +112,54 @@ const config: Config = {
     },
     footer: {
       //style: "dark",
+      logo: {
+        alt: 'Kukso Studios Logo',
+        src: 'brand/logo_circle_frame.png',
+        href: '/',
+        width: 160,
+        height: 160,
+      },
       links: [
         {
-          title: "Pages",
+          title: "STUDIO",
           items: [
             {
-              label: "Home",
-              to: "/",
+              label: "About Us",
+              to: "/about",
             },
             {
               label: "Projects",
               to: "/projects",
             },
+            // {
+            //   label: "Blog",
+            //   to: "/blog",
+            // },
             {
-              label: "Blog",
-              to: "/blog",
-            },
-            {
-              label: "Wiki",
+              label: "Docs",
               to: "/docs/intro",
             },
           ],
         },
         {
-          title: "Profile",
+          title: "LEGAL",
+          items: [
+            {
+              label: "Privacy Policy",
+              href: "/privacy-policy",
+            },
+            {
+              label: "Terms of Service",
+              href: "/terms-of-service",
+            },
+          ],
+        },
+        {
+          title: "EXTERNAL",
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/CublexLabs",
+              href: "https://github.com/KuksoHQ",
             },
             {
               label: "SpigotMC",
@@ -152,7 +172,7 @@ const config: Config = {
           ],
         },
         {
-          title: "Community",
+          title: "JOIN US",
           items: [
             {
               label: "Discord",
@@ -160,16 +180,16 @@ const config: Config = {
             },
             {
               label: "Reddit",
-              href: "https://www.reddit.com/u/CublexLabs/",
+              href: "https://www.reddit.com/r/KuksoHQ/",
             },
             {
               label: "YouTube",
-              href: "https://www.youtube.com/CublexLabs/",
+              href: "https://www.youtube.com/@KuksoHQ",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Kukso Studios. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Kukso Studios.`,
     },
     prism: {
       theme: prismThemes.github,

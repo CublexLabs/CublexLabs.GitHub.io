@@ -7,6 +7,10 @@
  */
 
 /* You can override the default Infima variables here. */
+html {
+  font-size: 90%; /* Reduce base size by 20% for Press Start 2P */
+}
+
 :root {
   /* Core Brand Colors - Kukso Rebrand */
   --ifm-color-primary: #7c3aed;
