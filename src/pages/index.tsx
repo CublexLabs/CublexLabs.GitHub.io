@@ -1,12 +1,10 @@
 import type { ReactNode } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import {
-  HeroSection,
-  WhatWeDoSection,
-  FocusAreasSection,
-  WhyCublexSection,
-} from '@site/src/components/HomepageSections';
+import HeroSection from '@site/src/components/HomepageSections/HeroSection';
+import WhatWeDoSection from '@site/src/components/HomepageSections/WhatWeDoSection';
+import FocusAreasSection from '@site/src/components/HomepageSections/FocusAreasSection';
+import WhyKuksoSection from '@site/src/components/HomepageSections/WhyKuksoSection';
 
 import AmbientBackground from '@site/src/components/AmbientBackground';
 
@@ -22,7 +20,7 @@ export default function Home(): ReactNode {
         <HeroSection />
         <WhatWeDoSection />
         <FocusAreasSection />
-        <WhyCublexSection />
+        <WhyKuksoSection />
       </main>
     </Layout>
   );

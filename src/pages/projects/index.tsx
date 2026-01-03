@@ -20,7 +20,7 @@ export default function Projects() {
     });
 
     return (
-        <Layout title="Projects" description="Cublex Labs Digital Laboratory">
+        <Layout title="Projects" description="Kukso Studios Digital Laboratory">
             <main>
                 {/* Hero Section */}
                 <section className="lab-hero">
@@ -30,7 +30,7 @@ export default function Projects() {
                                 <span className="lab-path">~/projects</span>
                                 <h1 className="lab-title">The Laboratory</h1>
                                 <p className="lab-subtitle">
-                                    A curated collection of experiments, production services, and indie titles built by Cublex.
+                                    A curated collection of experiments, production services, and indie titles built by Kukso Studios.
                                 </p>
 
                                 {/* Filter Rail moved inside Hero */}

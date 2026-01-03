@@ -5,16 +5,16 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "CublexLabs",
+  title: "Kukso Studios",
   tagline: "Tools for creators. Worlds for players.",
-  favicon: "img/favicon.ico",
+  favicon: "brand/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  url: "https://labs.cublex.net",
+  url: "https://labs.kukso.net",
   baseUrl: "/",
 
   organizationName: "CublexLabs",
@@ -68,12 +68,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: "img/social-card.jpg",
+    image: "meta/social_card.png",
     navbar: {
-      title: "CublexLabs",
+      title: "Kukso Studios",
       logo: {
-        alt: "CublexLabs Logo",
-        src: "img/logo.svg",
+        alt: "Kukso Studios Logo",
+        src: "brand/logo.svg",
       },
       items: [
         {
@@ -167,7 +167,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Cublex Labs, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Kukso Studios. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
