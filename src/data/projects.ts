@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
         tags: ['ReactNative', 'TypeScript', 'Zustand'],
         status: 'Alpha',
         image: 'https://images.unsplash.com/photo-1610641564155-8ea9845579dd?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        category: 'Apps'
+        category: 'Platforms'
     },
     {
         title: 'CublexCore',
@@ -63,12 +63,13 @@ export const PROJECTS: Project[] = [
         link: '/docs/category/cubdialogs',
     },
     {
-        title: 'CraftHub',
-        description: 'Daily rewards for mini-game players.',
-        tags: ['ReactNative', 'TypeScript', 'Zustand'],
+        title: 'FirstSpawn',
+        description: 'Advanced server exploration and player retention tool.',
+        tags: ['Java', 'Spigot', 'Bukkit'],
         status: 'Alpha',
-        image: 'https://images.unsplash.com/photo-1585427448073-f7c6fdec14e2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        category: 'Apps'
+        image: '/content/logo_firstspawn.png',
+        category: 'Platforms',
+        link: '/docs/category/firstspawn',
     },
     // {
     //     title: 'Luminal Call',
