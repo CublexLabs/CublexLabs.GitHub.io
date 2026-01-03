@@ -62,17 +62,7 @@ export default function HeroSection() {
                             </Link>
                         </div>
                         
-                        {/* Glare effect */}
-                        <div style={{
-                            position: 'absolute',
-                            top: 0, left: 0, right: 0, bottom: 0,
-                            background: `radial-gradient(circle at ${50 - rotation.y * 3}% ${50 + rotation.x * 3}%, rgba(255,255,255,0.1) 0%, transparent 50%)`,
-                            opacity: isHovering ? 1 : 0,
-                            transition: 'opacity 0.3s',
-                            pointerEvents: 'none',
-                            borderRadius: '2rem',
-                            zIndex: 10
-                        }} />
+                        {/* Glare effect removed for pixel style */}
                     </div>
                 </div>
             </div>
