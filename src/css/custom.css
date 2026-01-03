@@ -195,6 +195,24 @@ body {
   box-shadow: 12px 12px 0px rgba(0, 0, 0, 1);
 }
 
+@media (max-width: 996px) {
+  .pixel-card {
+    /* Full width breakout */
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    border-radius: 0;
+    
+    /* Remove boxy look */
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    
+    /* Adjust padding */
+    padding: 2rem 1rem;
+  }
+}
+
 /* Hero specific overrides if needed, but reusing base style */
 .hero-content-glass {
   /* Inherits pixel-card vibe but specific to hero layout */
