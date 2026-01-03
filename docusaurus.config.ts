@@ -74,8 +74,7 @@ const config: Config = {
       logo: {
         alt: "Kukso Studios Logo",
         src: "brand/logo_k.png",
-        // width: 32,
-        // height: 32,
+        srcDark: 'brand/logo_k.png',
       },
       items: [
         {
@@ -100,6 +99,71 @@ const config: Config = {
           label: "Docs",
           position: "left",
         },
+        {
+          type: 'dropdown',
+          label: 'Community',
+          position: 'left',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/KuksoHQ',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discord.gg/Hqq3CdnenN',
+            },
+            // {
+            //   label: 'Reddit',
+            //   href: 'https://www.reddit.com/r/KuksoHQ/',
+            // },
+            // {
+            //   label: 'YouTube',
+            //   href: 'https://www.youtube.com/@KuksoHQ',
+            // },
+          ],
+        },
+        {
+          type: 'dropdown',
+          label: 'Marketplaces',
+          position: 'left',
+          items: [
+            {
+              label: 'SpigotMC',
+              href: 'https://www.spigotmc.org/resources/authors/namrod98/',
+            },
+            {
+              label: 'BuiltByBit',
+              href: 'https://builtbybit.com/search/member?user_id=621438',
+            },
+            {
+              label: 'Modrinth',
+              href: 'https://modrinth.com/user/DevBD1',
+            },
+            // {
+            //   label: 'Patreon',
+            //   href: 'https://www.patreon.com/kuksohq',
+            // },
+          ],
+        },
+        {
+          type: 'dropdown',
+          label: 'Legal',
+          position: 'left',
+          items: [
+            {
+              label: 'Privacy Policy',
+              href: '/privacy-policy',
+            },
+            {
+              label: 'Cookie Policy',
+              href: '/cookie-policy',
+            },
+            {
+              label: 'Terms of Service',
+              href: '/terms-of-service',
+            },
+          ],
+        },
         // {
         //   type: "localeDropdown",
         //   position: "right",
@@ -119,77 +183,77 @@ const config: Config = {
         width: 160,
         height: 160,
       },
-      links: [
-        {
-          title: "STUDIO",
-          items: [
-            {
-              label: "About Us",
-              to: "/about",
-            },
-            {
-              label: "Projects",
-              to: "/projects",
-            },
-            // {
-            //   label: "Blog",
-            //   to: "/blog",
-            // },
-            {
-              label: "Docs",
-              to: "/docs/intro",
-            },
-          ],
-        },
-        {
-          title: "LEGAL",
-          items: [
-            {
-              label: "Privacy Policy",
-              href: "/privacy-policy",
-            },
-            {
-              label: "Terms of Service",
-              href: "/terms-of-service",
-            },
-          ],
-        },
-        {
-          title: "EXTERNAL",
-          items: [
-            {
-              label: "GitHub",
-              href: "https://github.com/KuksoHQ",
-            },
-            {
-              label: "SpigotMC",
-              href: "https://www.spigotmc.org/resources/authors/394490/",
-            },
-            {
-              label: "BuiltByBit",
-              href: "https://builtbybit.com/search/member?user_id=621438",
-            },
-          ],
-        },
-        {
-          title: "JOIN US",
-          items: [
-            {
-              label: "Discord",
-              href: "https://discord.gg/Hqq3CdnenN",
-            },
-            {
-              label: "Reddit",
-              href: "https://www.reddit.com/r/KuksoHQ/",
-            },
-            {
-              label: "YouTube",
-              href: "https://www.youtube.com/@KuksoHQ",
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Kukso Studios.`,
+      // links: [
+      //   {
+      //     title: "STUDIO",
+      //     items: [
+      //       {
+      //         label: "About Us",
+      //         to: "/about",
+      //       },
+      //       {
+      //         label: "Projects",
+      //         to: "/projects",
+      //       },
+      //       // {
+      //       //   label: "Blog",
+      //       //   to: "/blog",
+      //       // },
+      //       {
+      //         label: "Docs",
+      //         to: "/docs/intro",
+      //       },
+      //     ],
+      //   },
+      //   {
+      //     title: "LEGAL",
+      //     items: [
+      //       {
+      //         label: "Privacy Policy",
+      //         href: "/privacy-policy",
+      //       },
+      //       {
+      //         label: "Terms of Service",
+      //         href: "/terms-of-service",
+      //       },
+      //     ],
+      //   },
+      //   {
+      //     title: "EXTERNAL",
+      //     items: [
+      //       {
+      //         label: "GitHub",
+      //         href: "https://github.com/KuksoHQ",
+      //       },
+      //       {
+      //         label: "SpigotMC",
+      //         href: "https://www.spigotmc.org/resources/authors/394490/",
+      //       },
+      //       {
+      //         label: "BuiltByBit",
+      //         href: "https://builtbybit.com/search/member?user_id=621438",
+      //       },
+      //     ],
+      //   },
+      //   {
+      //     title: "JOIN US",
+      //     items: [
+      //       {
+      //         label: "Discord",
+      //         href: "https://discord.gg/Hqq3CdnenN",
+      //       },
+      //       {
+      //         label: "Reddit",
+      //         href: "https://www.reddit.com/r/KuksoHQ/",
+      //       },
+      //       {
+      //         label: "YouTube",
+      //         href: "https://www.youtube.com/@KuksoHQ",
+      //       },
+      //     ],
+      //   },
+      // ],
+      copyright: `Copyright © ${new Date().getFullYear()} Kukso Studios`,
     },
     prism: {
       theme: prismThemes.github,
