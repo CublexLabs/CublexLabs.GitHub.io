@@ -85,7 +85,7 @@ export default function ParticlesTextAnimation() {
                             baseTargetY: y,
                             vx: 0,
                             vy: 0,
-                            size: Math.random() * 2 + 1,
+                            size: step, // Pixel size matches grid step
                             // Randomly pick brand colors
                             color: Math.random() > 0.5 ? config.colors[0] : config.colors[1]
                         });
@@ -164,11 +164,13 @@ export default function ParticlesTextAnimation() {
                 p.x += p.vx;
                 p.y += p.vy;
 
-                // Draw
+                // Draw Nu-Pixel
                 ctx.fillStyle = p.color;
-                ctx.beginPath();
-                ctx.arc(renderX, renderY, p.size, 0, Math.PI * 2);
-                ctx.fill();
+                // Round coordinates to snap to pixel grid for sharper look
+                const px = Math.floor(renderX);
+                const py = Math.floor(renderY);
+                // Draw square instead of circle
+                ctx.fillRect(px, py, p.size, p.size);
             });
 
             animationFrameId = requestAnimationFrame(animate);

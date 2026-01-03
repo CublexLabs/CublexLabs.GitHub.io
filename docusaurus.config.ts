@@ -5,20 +5,20 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "CublexLabs",
-  tagline: "Tools for creators. Worlds for players.",
-  favicon: "img/favicon.ico",
+  title: "Kukso Studios",
+  tagline: "We cook what you enjoy.",
+  favicon: "brand/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  url: "https://labs.cublex.net",
+  url: "https://kukso.com",
   baseUrl: "/",
 
-  organizationName: "CublexLabs",
-  projectName: "CublexLabs.GitHub.io",
+  organizationName: "KuksoHQ",
+  projectName: "KuksoHQ.GitHub.io",
 
   deploymentBranch: "gh-pages",
 
@@ -68,17 +68,18 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: "img/social-card.jpg",
+    image: "meta/social_card.png",
     navbar: {
-      title: "CublexLabs",
+      title: '',
       logo: {
-        alt: "CublexLabs Logo",
-        src: "img/logo.svg",
+        alt: "Kukso Studios Logo",
+        src: "brand/logo_k.png",
+        srcDark: 'brand/logo_k.png',
       },
       items: [
         {
           to: "/",
-          label: "Home",
+          label: "Homepage",
           position: "left",
           activeBaseRegex: "^/$",
         },
@@ -87,21 +88,86 @@ const config: Config = {
           label: "Projects",
           position: "left",
         },
-        {
-          to: "/blog",
-          label: "Blog",
-          position: "left",
-        },
+        // {
+        //   to: "/blog",
+        //   label: "Blog",
+        //   position: "left",
+        // },
         {
           type: "docSidebar",
-          sidebarId: "wikiSidebar",
-          label: "Wiki",
+          sidebarId: "docSidebar",
+          label: "Docs",
           position: "left",
         },
         {
-          type: "localeDropdown",
-          position: "right",
+          type: 'dropdown',
+          label: 'Community',
+          position: 'left',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/KuksoHQ',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discord.gg/Hqq3CdnenN',
+            },
+            // {
+            //   label: 'Reddit',
+            //   href: 'https://www.reddit.com/r/KuksoHQ/',
+            // },
+            // {
+            //   label: 'YouTube',
+            //   href: 'https://www.youtube.com/@KuksoHQ',
+            // },
+          ],
         },
+        {
+          type: 'dropdown',
+          label: 'Marketplaces',
+          position: 'left',
+          items: [
+            {
+              label: 'SpigotMC',
+              href: 'https://www.spigotmc.org/resources/authors/namrod98/',
+            },
+            {
+              label: 'BuiltByBit',
+              href: 'https://builtbybit.com/search/member?user_id=621438',
+            },
+            {
+              label: 'Modrinth',
+              href: 'https://modrinth.com/user/DevBD1',
+            },
+            // {
+            //   label: 'Patreon',
+            //   href: 'https://www.patreon.com/kuksohq',
+            // },
+          ],
+        },
+        {
+          type: 'dropdown',
+          label: 'Legal',
+          position: 'left',
+          items: [
+            {
+              label: 'Privacy Policy',
+              href: '/privacy-policy',
+            },
+            {
+              label: 'Cookie Policy',
+              href: '/cookie-policy',
+            },
+            {
+              label: 'Terms of Service',
+              href: '/terms-of-service',
+            },
+          ],
+        },
+        // {
+        //   type: "localeDropdown",
+        //   position: "right",
+        // },
         // {
         //   type: "docsVersionDropdown",
         //   position: "right",
@@ -110,64 +176,84 @@ const config: Config = {
     },
     footer: {
       //style: "dark",
-      links: [
-        {
-          title: "Pages",
-          items: [
-            {
-              label: "Home",
-              to: "/",
-            },
-            {
-              label: "Projects",
-              to: "/projects",
-            },
-            {
-              label: "Blog",
-              to: "/blog",
-            },
-            {
-              label: "Wiki",
-              to: "/docs/intro",
-            },
-          ],
-        },
-        {
-          title: "Profile",
-          items: [
-            {
-              label: "GitHub",
-              href: "https://github.com/CublexLabs",
-            },
-            {
-              label: "SpigotMC",
-              href: "https://www.spigotmc.org/resources/authors/394490/",
-            },
-            {
-              label: "BuiltByBit",
-              href: "https://builtbybit.com/search/member?user_id=621438",
-            },
-          ],
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              label: "Discord",
-              href: "https://discord.gg/Hqq3CdnenN",
-            },
-            {
-              label: "Reddit",
-              href: "https://www.reddit.com/u/CublexLabs/",
-            },
-            {
-              label: "YouTube",
-              href: "https://www.youtube.com/CublexLabs/",
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Cublex Labs, Inc. Built with Docusaurus.`,
+      logo: {
+        alt: 'Kukso Studios Logo',
+        src: 'brand/logo_circle_frame.png',
+        href: '/',
+        width: 160,
+        height: 160,
+      },
+      // links: [
+      //   {
+      //     title: "STUDIO",
+      //     items: [
+      //       {
+      //         label: "About Us",
+      //         to: "/about",
+      //       },
+      //       {
+      //         label: "Projects",
+      //         to: "/projects",
+      //       },
+      //       // {
+      //       //   label: "Blog",
+      //       //   to: "/blog",
+      //       // },
+      //       {
+      //         label: "Docs",
+      //         to: "/docs/intro",
+      //       },
+      //     ],
+      //   },
+      //   {
+      //     title: "LEGAL",
+      //     items: [
+      //       {
+      //         label: "Privacy Policy",
+      //         href: "/privacy-policy",
+      //       },
+      //       {
+      //         label: "Terms of Service",
+      //         href: "/terms-of-service",
+      //       },
+      //     ],
+      //   },
+      //   {
+      //     title: "EXTERNAL",
+      //     items: [
+      //       {
+      //         label: "GitHub",
+      //         href: "https://github.com/KuksoHQ",
+      //       },
+      //       {
+      //         label: "SpigotMC",
+      //         href: "https://www.spigotmc.org/resources/authors/394490/",
+      //       },
+      //       {
+      //         label: "BuiltByBit",
+      //         href: "https://builtbybit.com/search/member?user_id=621438",
+      //       },
+      //     ],
+      //   },
+      //   {
+      //     title: "JOIN US",
+      //     items: [
+      //       {
+      //         label: "Discord",
+      //         href: "https://discord.gg/Hqq3CdnenN",
+      //       },
+      //       {
+      //         label: "Reddit",
+      //         href: "https://www.reddit.com/r/KuksoHQ/",
+      //       },
+      //       {
+      //         label: "YouTube",
+      //         href: "https://www.youtube.com/@KuksoHQ",
+      //       },
+      //     ],
+      //   },
+      // ],
+      copyright: `Copyright © ${new Date().getFullYear()} Kukso Studios`,
     },
     prism: {
       theme: prismThemes.github,
