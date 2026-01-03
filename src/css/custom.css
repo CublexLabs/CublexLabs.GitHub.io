@@ -945,6 +945,7 @@ footer {
 }
 
 /* Ensure controls align well */
+/* Ensure controls align well */
 .lab-search-container {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -954,4 +955,16 @@ footer {
     align-items: center;
     gap: 0.5rem;
     width: 100%;
+}
+
+@media (max-width: 996px) {
+  .lab-search-container {
+    margin-top: 1rem;
+  }
+
+  /* Ensure filters wrap nicely on mobile */
+  .lab-filter-rail {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 }
