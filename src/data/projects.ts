@@ -28,15 +28,24 @@ export const FEATURED_PROJECT: FeaturedProjectData = {
 
 export const PROJECTS: Project[] = [
     {
-        title: 'Routinai',
-        description: 'AI assisted habit-tracker app for mobile.',
+        title: 'FirstSpawn',
+        description: 'Advanced server exploration and player retention platform.',
+        tags: ['React', 'TypeScript', 'Next.js', 'C#.NET'],
+        status: 'Alpha',
+        image: '/content/logo_firstspawn.png',
+        category: 'Platforms',
+        link: '/docs/category/firstspawn',
+    },
+    {
+        title: 'Discipline vs Dopamine',
+        description: 'Habit-tracker mobile app with enhanced AI features.',
         tags: ['ReactNative', 'TypeScript', 'Zustand'],
         status: 'Alpha',
-        image: 'https://images.unsplash.com/photo-1610641564155-8ea9845579dd?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image: '/content/logo_dd.png',
         category: 'Platforms'
     },
     {
-        title: 'CublexCore',
+        title: 'KuksoLib',
         description: 'The core plugin for Kukso Studios Minecraft plugins.',
         tags: ['Java', 'Spigot', 'Bukkit'],
         status: 'Beta',
@@ -45,7 +54,7 @@ export const PROJECTS: Project[] = [
         link: '/docs/category/cublexcore',
     },
     {
-        title: 'CubWorlds',
+        title: 'KuksoWorlds',
         description: 'A lightweight plugin for world moderation.',
         tags: ['Java', 'Spigot', 'Bukkit'],
         status: 'Beta',
@@ -54,7 +63,7 @@ export const PROJECTS: Project[] = [
         link: '/docs/category/cubworlds',
     },
     {
-        title: 'CubDialogs',
+        title: 'KuksoDialogs',
         description: 'A plugin for dialog moderation.',
         tags: ['Java', 'Spigot', 'Bukkit'],
         status: 'Beta',
@@ -63,13 +72,22 @@ export const PROJECTS: Project[] = [
         link: '/docs/category/cubdialogs',
     },
     {
-        title: 'FirstSpawn',
-        description: 'Advanced server exploration and player retention tool.',
+        title: 'KuksoItems',
+        description: 'A plugin for item moderation.',
         tags: ['Java', 'Spigot', 'Bukkit'],
-        status: 'Alpha',
-        image: '/content/logo_firstspawn.png',
-        category: 'Platforms',
-        link: '/docs/category/firstspawn',
+        status: 'Beta',
+        image: '/content/logo_kuksoitems.png',
+        category: 'Plugins',
+        link: '/docs/category/cubdialogs',
+    },
+    {
+        title: 'KuksoDungeons',
+        description: 'A plugin for procedural dungeon generation.',
+        tags: ['Java', 'Spigot', 'Bukkit'],
+        status: 'Beta',
+        image: '/content/logo_kuksodungeons.png',
+        category: 'Plugins',
+        link: '/docs/category/cubdialogs',
     },
     // {
     //     title: 'Luminal Call',
