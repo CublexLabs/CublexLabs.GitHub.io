@@ -5,6 +5,7 @@ import HeroSection from '@site/src/components/HomepageSections/HeroSection';
 import WhatWeDoSection from '@site/src/components/HomepageSections/WhatWeDoSection';
 import FocusAreasSection from '@site/src/components/HomepageSections/FocusAreasSection';
 import WhyKuksoSection from '@site/src/components/HomepageSections/WhyKuksoSection';
+import ContactSection from '@site/src/components/HomepageSections/ContactSection';
 
 import AmbientBackground from '@site/src/components/AmbientBackground';
 
@@ -21,6 +22,7 @@ export default function Home(): ReactNode {
         <WhatWeDoSection />
         <FocusAreasSection />
         <WhyKuksoSection />
+        <ContactSection />
       </main>
     </Layout>
   );

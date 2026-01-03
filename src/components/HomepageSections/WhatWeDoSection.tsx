@@ -1,4 +1,5 @@
 import React from 'react';
+import PixelCard from '../UI/PixelCard';
 
 export default function WhatWeDoSection() {
     const items = [
@@ -20,21 +21,23 @@ export default function WhatWeDoSection() {
     ];
 
     return (
-        <section className="features-section">
+        <section className="features-section" id="what-we-do">
             <div className="container">
-                <div className="section-header">
-                    <span className="section-tagline">What We Do</span>
-                    <h2 className="section-title">A Modern Digital Lab</h2>
-                </div>
-                <div className="grid-3">
-                    {items.map((item, idx) => (
-                        <div key={idx} className="feature-card">
-                            <div className="feature-icon">{item.icon}</div>
-                            <h3 className="feature-title">{item.title}</h3>
-                            <p className="feature-description">{item.description}</p>
-                        </div>
-                    ))}
-                </div>
+                <PixelCard>
+                    <div className="section-header">
+                        <span className="section-tagline">What We Do</span>
+                        <h2 className="section-title">A Modern Digital Lab</h2>
+                    </div>
+                    <div className="grid-3">
+                        {items.map((item, idx) => (
+                            <div key={idx} className="feature-card">
+                                <div className="feature-icon">{item.icon}</div>
+                                <h3 className="feature-title">{item.title}</h3>
+                                <p className="feature-description">{item.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </PixelCard>
             </div>
         </section>
     );

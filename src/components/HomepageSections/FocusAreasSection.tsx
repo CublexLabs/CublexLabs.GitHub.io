@@ -1,4 +1,5 @@
 import React from 'react';
+import PixelCard from '../UI/PixelCard';
 
 export default function FocusAreasSection() {
     const areas = [
@@ -20,21 +21,23 @@ export default function FocusAreasSection() {
     ];
 
     return (
-        <section className="features-section" style={{ background: 'var(--kukso-bg-card)' }}>
+        <section className="features-section" id="focus">
             <div className="container">
-                <div className="section-header">
-                    <span className="section-tagline">Our Focus</span>
-                    <h2 className="section-title">Building for the Future</h2>
-                </div>
-                <div className="grid-3">
-                    {areas.map((area, idx) => (
-                        <div key={idx} className="feature-card">
-                            <div className="feature-icon">{area.icon}</div>
-                            <h3 className="feature-title">{area.title}</h3>
-                            <p className="feature-description">{area.description}</p>
-                        </div>
-                    ))}
-                </div>
+                <PixelCard>
+                    <div className="section-header">
+                        <span className="section-tagline">Our Focus</span>
+                        <h2 className="section-title">Building for the Future</h2>
+                    </div>
+                    <div className="grid-3">
+                        {areas.map((area, idx) => (
+                            <div key={idx} className="feature-card">
+                                <div className="feature-icon">{area.icon}</div>
+                                <h3 className="feature-title">{area.title}</h3>
+                                <p className="feature-description">{area.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </PixelCard>
             </div>
         </section>
     );

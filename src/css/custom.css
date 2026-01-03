@@ -179,7 +179,25 @@ body {
   font-weight: 400;
 }
 
+/* Pixel Card Component */
+.pixel-card {
+  background: var(--ifm-navbar-background-color);
+  border: 4px solid var(--ifm-color-primary);
+  border-radius: 12px;
+  padding: 4rem;
+  box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  position: relative;
+}
+
+[data-theme='dark'] .pixel-card {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 12px 12px 0px rgba(0, 0, 0, 1);
+}
+
+/* Hero specific overrides if needed, but reusing base style */
 .hero-content-glass {
+  /* Inherits pixel-card vibe but specific to hero layout */
   background: var(--ifm-navbar-background-color);
   border: 4px solid var(--ifm-color-primary);
   border-radius: 12px;
@@ -187,11 +205,10 @@ body {
   box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.5);
   max-width: 1300px;
   margin: 0 auto;
-  position: relative; /* For z-index context */
+  position: relative;
 }
 
 [data-theme='dark'] .hero-content-glass {
-  /* background handled by variable */
   border-color: var(--ifm-color-primary);
   box-shadow: 12px 12px 0px rgba(0, 0, 0, 1);
 }

@@ -29,7 +29,7 @@ export default function HeroSection() {
     };
 
     return (
-        <section className="hero-section" style={{ perspective: '1000px' }}>
+        <section className="hero-section" id="hero" style={{ perspective: '1000px' }}>
             <div className="container">
                 {/* Wrapper handles mouse events to prevent flickering when child rotates away */}
                 <div
@@ -52,8 +52,13 @@ export default function HeroSection() {
                         <div className="hero-buttons" style={{ transform: 'translateZ(50px)' }}>
                             <Link
                                 className="cta-button"
-                                to="/docs/intro">
-                                Explore Wiki
+                                to="/projects">
+                                Our Projects
+                            </Link>
+                            <Link
+                                className="cta-button cta-button-secondary"
+                                to="/#contact">
+                                Request Custom Works
                             </Link>
                             <Link
                                 className="cta-button cta-button-secondary"
