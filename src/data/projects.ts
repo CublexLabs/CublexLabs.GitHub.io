@@ -26,7 +26,7 @@ export const FEATURED_PROJECT: FeaturedProjectData = {
     // image: 'https://media.istockphoto.com/id/1312381221/tr/foto%C4%9Fraf/3d-%C3%B6zet-k%C3%BCpler-video-oyunu-geometrik-mozaik-dalgalar-deseni-kahverengi-ve-ye%C5%9Fil-%C3%A7im.jpg?s=2048x2048&w=is&k=20&c=qfB6DRg9tTwD00IQLssCR2Qq3hn8_sJXtWjnqzE3JOU=',
     // link: '/docs/category/minecraft-plugins',
     image: '/content/logo_firstspawn.png',
-    link: 'https://firstspawn.com/',
+    link: 'https://www.firstspawn.com/en?utm_source=kukso&utm_medium=featuredcard',
 };
 
 export const PROJECTS: Project[] = [
@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
         image: '/content/logo_firstspawn.png',
         category: 'Web',
         // link: '/docs/category/firstspawn',
-        link: 'https://www.firstspawn.com/',
+        link: 'https://www.firstspawn.com/en?utm_source=kukso&utm_medium=projectcard',
     },
     // {
     //     title: 'Discipline vs Dopamine',
