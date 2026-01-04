@@ -36,7 +36,8 @@ export const PROJECTS: Project[] = [
         price: 'Free',
         image: '/content/logo_firstspawn.png',
         category: 'Web',
-        link: '/docs/category/firstspawn',
+        // link: '/docs/category/firstspawn',
+        link: 'https://www.firstspawn.com/',
     },
     // {
     //     title: 'Discipline vs Dopamine',

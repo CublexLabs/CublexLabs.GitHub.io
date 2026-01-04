@@ -134,7 +134,7 @@ const config: Config = {
           items: [
             {
               label: 'SpigotMC',
-              href: 'https://www.spigotmc.org/resources/authors/namrod98/',
+              href: 'https://www.spigotmc.org/resources/authors/394490/',
             },
             {
               label: 'BuiltByBit',

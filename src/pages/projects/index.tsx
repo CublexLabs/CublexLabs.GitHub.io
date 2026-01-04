@@ -4,7 +4,7 @@ import FeaturedProject from '@site/src/components/Projects/FeaturedProject';
 import ProjectCard from '@site/src/components/Projects/ProjectCard';
 import { PROJECTS, FEATURED_PROJECT } from '@site/src/data/projects';
 
-const FILTERS = ['All', 'Web', 'Mobile', 'Minecraft']; // 'Games', 'Utilities'
+const FILTERS = ['All', 'Web', 'Minecraft']; // 'Games', 'Utilities', 'Mobile'
 
 export default function Projects() {
     const [activeFilter, setActiveFilter] = useState('All');
