@@ -19,12 +19,14 @@ export interface FeaturedProjectData {
 }
 
 export const FEATURED_PROJECT: FeaturedProjectData = {
-    title: 'Minecraft Plugins',
-    description: 'The best in class Minecraft plugins for a better experience.',
-    category: 'Minecraft',
-    version: 'v2.0.0-beta',
-    image: 'https://media.istockphoto.com/id/1312381221/tr/foto%C4%9Fraf/3d-%C3%B6zet-k%C3%BCpler-video-oyunu-geometrik-mozaik-dalgalar-deseni-kahverengi-ve-ye%C5%9Fil-%C3%A7im.jpg?s=2048x2048&w=is&k=20&c=qfB6DRg9tTwD00IQLssCR2Qq3hn8_sJXtWjnqzE3JOU=',
-    link: '/docs/category/minecraft-plugins',
+    title: 'FirstSpawn.com',
+    description: 'Advanced server exploration and player retention platform.', // The best in class Minecraft plugins for a better experience.
+    category: 'Web', // Minecraft
+    version: 'Early Access', //v2.0.0-beta
+    // image: 'https://media.istockphoto.com/id/1312381221/tr/foto%C4%9Fraf/3d-%C3%B6zet-k%C3%BCpler-video-oyunu-geometrik-mozaik-dalgalar-deseni-kahverengi-ve-ye%C5%9Fil-%C3%A7im.jpg?s=2048x2048&w=is&k=20&c=qfB6DRg9tTwD00IQLssCR2Qq3hn8_sJXtWjnqzE3JOU=',
+    // link: '/docs/category/minecraft-plugins',
+    image: '/content/logo_firstspawn.png',
+    link: 'https://firstspawn.com/',
 };
 
 export const PROJECTS: Project[] = [

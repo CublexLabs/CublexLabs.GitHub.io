@@ -6,6 +6,7 @@ import WhatWeDoSection from '@site/src/components/HomepageSections/WhatWeDoSecti
 import FocusAreasSection from '@site/src/components/HomepageSections/FocusAreasSection';
 import WhyKuksoSection from '@site/src/components/HomepageSections/WhyKuksoSection';
 import ContactSection from '@site/src/components/HomepageSections/ContactSection';
+import FlagshipPromo from '@site/src/components/FlagshipPromo';
 
 import AmbientBackground from '@site/src/components/AmbientBackground';
 
@@ -23,6 +24,7 @@ export default function Home(): ReactNode {
         <FocusAreasSection />
         <WhyKuksoSection />
         <ContactSection />
+        <FlagshipPromo />
       </main>
     </Layout>
   );
