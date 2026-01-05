@@ -9,6 +9,7 @@ import ContactSection from '@site/src/components/HomepageSections/ContactSection
 import FlagshipPromo from '@site/src/components/FlagshipPromo';
 
 import AmbientBackground from '@site/src/components/AmbientBackground';
+import { FEATURED_PROJECT } from '@site/src/data/projects';
 
 // ${siteConfig.title}
 export default function Home(): ReactNode {
@@ -24,7 +25,7 @@ export default function Home(): ReactNode {
         <FocusAreasSection />
         <WhyKuksoSection />
         <ContactSection />
-        <FlagshipPromo />
+        <FlagshipPromo project={FEATURED_PROJECT} />
       </main>
     </Layout>
   );

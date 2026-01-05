@@ -19,13 +19,13 @@ export default function ContactSection() {
                                 Have a project in mind or just want to say hello? We are always open to new ideas and collaborations.
                             </p>
                             <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', flexWrap: 'wrap' }}>
-                                <Link to="mailto:info@kukso.com" className="cta-button cta-button-secondary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
+                                <Link to="mailto:info@kukso.com" className="cta-button cta-button-secondary contact-social-btn">
                                     📧 Email Us
                                 </Link>
-                                <Link to="https://x.com/KuksoHQ" className="cta-button cta-button-secondary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
+                                <Link to="https://x.com/KuksoHQ" className="cta-button cta-button-secondary contact-social-btn">
                                     🐦 X
                                 </Link>
-                                <Link to="https://discord.gg/Hqq3CdnenN" className="cta-button cta-button-secondary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
+                                <Link to="https://discord.gg/Hqq3CdnenN" className="cta-button cta-button-secondary contact-social-btn">
                                     💬 Discord
                                 </Link>
                             </div>
@@ -38,7 +38,7 @@ export default function ContactSection() {
                                 Subscribe to get early access to our products, game updates, and exclusive dev-logs.
                             </p>
                             <form 
-                                action="#" // Placeholder for now
+                                action="#"
                                 style={{ display: 'flex', gap: '0.5rem', flexDirection: 'column' }}
                                 onSubmit={(e) => e.preventDefault()}
                             >
@@ -47,21 +47,11 @@ export default function ContactSection() {
                                         type="email" 
                                         placeholder="Enter your email" 
                                         required
-                                        style={{
-                                            flex: 1,
-                                            padding: '0.75rem',
-                                            borderRadius: '8px',
-                                            border: '2px solid var(--ifm-color-primary)',
-                                            background: 'var(--kukso-bg-base)',
-                                            color: 'var(--kukso-text-primary)',
-                                            fontFamily: 'inherit',
-                                            fontSize: '0.9rem'
-                                        }}
+                                        className="contact-input"
                                     />
                                     <button 
                                         type="submit" 
-                                        className="cta-button"
-                                        style={{ margin: 0, padding: '0.5rem 1.5rem', fontSize: '0.9rem' }}
+                                        className="cta-button contact-submit-btn"
                                     >
                                         Join
                                     </button>

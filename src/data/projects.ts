@@ -9,12 +9,9 @@ export interface Project {
     category?: string; // For filtering
 }
 
-export interface FeaturedProjectData {
-    title: string;
-    description: string;
+export interface FeaturedProjectData extends Pick<Project, 'title' | 'description' | 'image'> {
     category: string;
     version: string;
-    image: string;
     link: string;
 }
 

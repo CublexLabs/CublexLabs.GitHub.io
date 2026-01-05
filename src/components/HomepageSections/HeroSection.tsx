@@ -39,7 +39,7 @@ export default function HeroSection() {
                     onMouseLeave={handleMouseLeave}
                 >
                     <div 
-                        className="hero-content-glass"
+                        className="pixel-card hero-content-glass"
                         style={{
                             transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) scale3d(1.02, 1.02, 1.02)`,
                             transition: isHovering ? 'transform 0.1s ease-out' : 'transform 0.5s ease-out',
