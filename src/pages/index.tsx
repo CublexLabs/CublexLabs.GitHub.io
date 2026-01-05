@@ -9,11 +9,13 @@ import ContactSection from '@site/src/components/HomepageSections/ContactSection
 import FlagshipPromo from '@site/src/components/FlagshipPromo';
 
 import AmbientBackground from '@site/src/components/AmbientBackground';
-import { FEATURED_PROJECT } from '@site/src/data/projects';
+import { getFeaturedProject } from '@site/src/data/projects';
 
 // ${siteConfig.title}
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
+  const featuredProject = getFeaturedProject();
+  
   return (
     <Layout
       title={siteConfig.title}
@@ -25,8 +27,8 @@ export default function Home(): ReactNode {
         <FocusAreasSection />
         <WhyKuksoSection />
         <ContactSection />
-        <FlagshipPromo project={FEATURED_PROJECT} />
       </main>
+      {featuredProject && <FlagshipPromo project={featuredProject} />}
     </Layout>
   );
 }

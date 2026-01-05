@@ -813,7 +813,11 @@ body:hover .cursor-glow {
 }
 
 /* Ensure content appears above background animations */
-main,
+main {
+  position: relative;
+  z-index: 1;
+}
+
 .footer,
 footer {
   position: relative;

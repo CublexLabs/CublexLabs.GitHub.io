@@ -6,25 +6,10 @@ export interface Project {
     price: 'Free' | 'Paid';
     image: string;
     link?: string;
-    category?: string; // For filtering
+    category?: string;
+    featured?: boolean;
+    version?: string; // For featured project display
 }
-
-export interface FeaturedProjectData extends Pick<Project, 'title' | 'description' | 'image'> {
-    category: string;
-    version: string;
-    link: string;
-}
-
-export const FEATURED_PROJECT: FeaturedProjectData = {
-    title: 'FirstSpawn.com',
-    description: 'Advanced server exploration and player retention platform.', // The best in class Minecraft plugins for a better experience.
-    category: 'Web', // Minecraft
-    version: 'Early Access', //v2.0.0-beta
-    // image: 'https://media.istockphoto.com/id/1312381221/tr/foto%C4%9Fraf/3d-%C3%B6zet-k%C3%BCpler-video-oyunu-geometrik-mozaik-dalgalar-deseni-kahverengi-ve-ye%C5%9Fil-%C3%A7im.jpg?s=2048x2048&w=is&k=20&c=qfB6DRg9tTwD00IQLssCR2Qq3hn8_sJXtWjnqzE3JOU=',
-    // link: '/docs/category/minecraft-plugins',
-    image: '/content/logo_firstspawn.png',
-    link: 'https://www.firstspawn.com/en?utm_source=kukso&utm_medium=featuredcard',
-};
 
 export const PROJECTS: Project[] = [
     {
@@ -35,8 +20,9 @@ export const PROJECTS: Project[] = [
         price: 'Free',
         image: '/content/logo_firstspawn.png',
         category: 'Web',
-        // link: '/docs/category/firstspawn',
         link: 'https://www.firstspawn.com/en?utm_source=kukso&utm_medium=projectcard',
+        featured: true,
+        version: 'Early Access',
     },
     // {
     //     title: 'Discipline vs Dopamine',
@@ -117,3 +103,8 @@ export const PROJECTS: Project[] = [
     //     category: 'Game Dev'
     // },
 ];
+
+// Helper to get the featured project
+export function getFeaturedProject(): Project | undefined {
+    return PROJECTS.find(p => p.featured);
+}

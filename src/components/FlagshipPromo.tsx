@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
-import type { FeaturedProjectData } from '@site/src/data/projects';
+import type { Project } from '@site/src/data/projects';
 
 interface FlagshipPromoProps {
-  project: FeaturedProjectData;
+  project: Project;
 }
 
 export default function FlagshipPromo({ project }: FlagshipPromoProps) {
@@ -61,12 +61,14 @@ export default function FlagshipPromo({ project }: FlagshipPromoProps) {
             {project.description}
           </p>
 
-          <Link
-            to={project.link}
-            className="cta-button flagship-promo-cta"
-          >
-            Check it out
-          </Link>
+          {project.link && (
+            <Link
+              to={project.link}
+              className="cta-button flagship-promo-cta"
+            >
+              Check it out
+            </Link>
+          )}
         </div>
       </div>
     </div>

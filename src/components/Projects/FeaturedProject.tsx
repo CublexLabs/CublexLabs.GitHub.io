@@ -1,16 +1,14 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import type { Project } from '@site/src/data/projects';
 
-export interface FeaturedProjectProps {
-    title: string;
-    description: string;
-    category: string;
-    version: string;
-    image: string;
-    link: string;
+interface FeaturedProjectProps {
+    project: Project;
 }
 
-export default function FeaturedProject({ title, description, category, version, image, link }: FeaturedProjectProps) {
+export default function FeaturedProject({ project }: FeaturedProjectProps) {
+    const { title, description, category, version, image, link } = project;
+    
     return (
         <div className="featured-wrapper">
             <div className="featured-badge">
@@ -20,20 +18,24 @@ export default function FeaturedProject({ title, description, category, version,
             <div className="featured-card">
                 <div className="featured-content">
                     <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                        <span className="lab-filter-pill active" style={{ cursor: 'default' }}>{category}</span>
-                        <span style={{ fontFamily: 'monospace', color: 'var(--cublex-text-secondary)' }}>
-                            <span style={{ marginRight: '0.25rem' }}>⑂</span> {version}
-                        </span>
+                        {category && <span className="lab-filter-pill active" style={{ cursor: 'default' }}>{category}</span>}
+                        {version && (
+                            <span style={{ fontFamily: 'monospace', color: 'var(--cublex-text-secondary)' }}>
+                                <span style={{ marginRight: '0.25rem' }}>⑂</span> {version}
+                            </span>
+                        )}
                     </div>
                     <h2 className="hero-title" style={{ fontSize: '1.4rem', textAlign: 'left', marginBottom: '0.6rem' }}>{title}</h2>
                     <p className="feature-description" style={{ fontSize: '0.8rem', marginBottom: '0.8rem' }}>
                         {description}
                     </p>
-                    <div>
-                        <Link className="cta-button" to={link}>
-                            View Project
-                        </Link>
-                    </div>
+                    {link && (
+                        <div>
+                            <Link className="cta-button" to={link}>
+                                View Project
+                            </Link>
+                        </div>
+                    )}
                 </div>
 
                 <div className="featured-image-container">

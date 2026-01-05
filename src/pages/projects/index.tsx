@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import FeaturedProject from '@site/src/components/Projects/FeaturedProject';
 import ProjectCard from '@site/src/components/Projects/ProjectCard';
-import { PROJECTS, FEATURED_PROJECT } from '@site/src/data/projects';
+import { PROJECTS, getFeaturedProject } from '@site/src/data/projects';
 
 const FILTERS = ['All', 'Web', 'Minecraft']; // 'Games', 'Utilities', 'Mobile'
 
 export default function Projects() {
     const [activeFilter, setActiveFilter] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
+    const featuredProject = getFeaturedProject();
 
     const filteredProjects = PROJECTS.filter(project => {
         const matchesFilter = activeFilter === 'All' ||
@@ -36,7 +37,7 @@ export default function Projects() {
                             </div>
                             <div className="col col--6">
                                 <div className="featured-header-wrapper">
-                                    <FeaturedProject {...FEATURED_PROJECT} />
+                                    {featuredProject && <FeaturedProject project={featuredProject} />}
                                 </div>
                             </div>
                         </div>
